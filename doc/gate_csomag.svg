@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620" font-family="Arial, sans-serif" font-size="13">
+  <defs>
+    <marker id="a" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0 0L6 3L0 6z" fill="#d8ffe0"/></marker>
+    <marker id="b" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0 0L6 3L0 6z" fill="#ffd27a"/></marker>
+  </defs>
+  <rect width="900" height="620" fill="#0b1a12"/>
+
+  <!-- ============ 1) Egy mérési ciklus: 4 csomag x 8 impulzus, utána kiértékelés ============ -->
+  <text x="20" y="26" fill="#d8ffe0" font-size="15" font-weight="bold">1) Egy mérési ciklus (nem méretarányos): 32 impulzus = 4 csomag × 8 impulzus</text>
+  <text x="14" y="88" fill="#7fd99a">TX kapu</text>
+  <path d="M60 110H860" stroke="#1f4a2e" stroke-width="1"/>
+
+  <!-- csomagok -->
+  <g fill="#39ff7a" fill-opacity="0.25" stroke="#39ff7a" stroke-width="2">
+    <rect x="80" y="70" width="110" height="40"/>
+    <rect x="200" y="70" width="110" height="40"/>
+    <rect x="320" y="70" width="110" height="40"/>
+    <rect x="440" y="70" width="110" height="40"/>
+  </g>
+  <g fill="#d8ffe0" font-size="12" text-anchor="middle">
+    <text x="135" y="94">1. csomag</text>
+    <text x="255" y="94">2. csomag</text>
+    <text x="375" y="94">3. csomag</text>
+    <text x="495" y="94">4. csomag</text>
+  </g>
+  <g fill="#39ff7a" font-size="11" text-anchor="middle">
+    <text x="135" y="64">8 impulzus</text>
+    <text x="255" y="64">8 impulzus</text>
+    <text x="375" y="64">8 impulzus</text>
+    <text x="495" y="64">8 impulzus</text>
+  </g>
+
+  <!-- csomagok közti gombfigyelés -->
+  <g stroke="#ffd27a" stroke-width="1.5">
+    <path d="M195 120V132M315 120V132M435 120V132M555 120V132"/>
+  </g>
+  <text x="195" y="146" fill="#ffd27a" font-size="11" text-anchor="middle">buttonsUpdate()</text>
+  <text x="315" y="146" fill="#ffd27a" font-size="11" text-anchor="middle">buttonsUpdate()</text>
+  <text x="435" y="146" fill="#ffd27a" font-size="11" text-anchor="middle">buttonsUpdate()</text>
+  <text x="560" y="146" fill="#ffd27a" font-size="11" text-anchor="start">buttonsUpdate()</text>
+
+  <!-- feldolgozás -->
+  <rect x="570" y="70" width="290" height="40" fill="#ffd27a" fill-opacity="0.15" stroke="#ffd27a" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="715" y="87" fill="#ffd27a" font-size="12" text-anchor="middle">átlag, jelfeldolgozás, hang,</text>
+  <text x="715" y="102" fill="#ffd27a" font-size="12" text-anchor="middle">soros napló, OLED kirajzolás</text>
+
+  <!-- méretvonalak -->
+  <path d="M80 168H550" stroke="#d8ffe0" stroke-width="1.5" marker-start="url(#a)" marker-end="url(#a)"/>
+  <text x="315" y="186" fill="#d8ffe0" text-anchor="middle">32 impulzus ≈ 64 ms (500 Hz-en: 32 × 2 ms)</text>
+  <path d="M570 168H860" stroke="#ffd27a" stroke-width="1.5" marker-start="url(#b)" marker-end="url(#b)"/>
+  <text x="715" y="186" fill="#ffd27a" text-anchor="middle">kb. 100–120 ms (főleg a kijelző)</text>
+  <text x="20" y="208" fill="#d8ffe0" font-size="12">Összesen ≈ 180 ms / ciklus (~5–6 mérés/s). A mérés közben a kijelző nem rajzol, és fordítva; utána a ciklus előlről kezdődik.</text>
+
+  <!-- ============ 2) Egy csomag nagyítva ============ -->
+  <text x="20" y="246" fill="#d8ffe0" font-size="15" font-weight="bold">2) Egy csomag nagyítva: 8 impulzus, mindegyik T = 1/f periódussal (500 Hz → 2 ms)</text>
+  <text x="14" y="296" fill="#7fd99a">TX kapu</text>
+  <path d="M60 320H860" stroke="#1f4a2e" stroke-width="1"/>
+  <path d="M60 320H80V285H90V320H150V285H160V320H220V285H230V320H290V285H300V320H360V285H370V320H430V285H440V320H500V285H510V320H570V285H580V320H640V285H650V320H710V285H720V320H780V285H790V320H860" stroke="#39ff7a" stroke-width="2" fill="none"/>
+  <g stroke="#1f4a2e" stroke-width="1" stroke-dasharray="2 3">
+    <path d="M85 270V335M155 270V335M225 270V335M295 270V335M365 270V335M435 270V335M505 270V335M575 270V335M645 270V335M715 270V335M785 270V335"/>
+  </g>
+  <path d="M85 346H155" stroke="#d8ffe0" stroke-width="1.5" marker-start="url(#a)" marker-end="url(#a)"/>
+  <text x="120" y="362" fill="#d8ffe0" font-size="12" text-anchor="middle">T = 2 ms</text>
+  <text x="85" y="268" fill="#39ff7a" font-size="11">1.</text>
+  <text x="155" y="268" fill="#39ff7a" font-size="11">2.</text>
+  <text x="715" y="268" fill="#39ff7a" font-size="11">8.</text>
+  <text x="170" y="388" fill="#d8ffe0" font-size="12">• Az impulzus (tp) és az S1/S2 mintavétel alatt a megszakítások tiltottak (pontos időzítés, nincs jitter).</text>
+  <text x="170" y="406" fill="#d8ffe0" font-size="12">• Az impulzusok közti várakozás alatt a megszakítások engedélyezettek (a millis() ezért pontos).</text>
+  <text x="170" y="424" fill="#ffd27a" font-size="12">• A csomag végén a buttonsUpdate() lefut (gombok pollozása), a periódus ilyenkor kissé megnyúlhat.</text>
+  <text x="170" y="442" fill="#d8ffe0" font-size="12">• Minden impulzusnál S1 és S2 mintavétel; a ciklus végén ezek átlaga (Σ / 32) adja az eredményt.</text>
+
+  <!-- ============ 3) Egy impulzus nagyítva ============ -->
+  <text x="20" y="480" fill="#d8ffe0" font-size="15" font-weight="bold">3) Egy impulzus (alapértékekkel; a késleltetések a TX KIKAPCSOLÁSÁTÓL számítanak)</text>
+  <text x="14" y="520" fill="#7fd99a">TX kapu</text>
+  <path d="M60 556H100V510H280V556H500" stroke="#39ff7a" stroke-width="2" fill="none"/>
+  <path d="M500 556H515M535 556H570V510" stroke="#39ff7a" stroke-width="2" fill="none"/>
+  <text x="517" y="560" fill="#39ff7a" font-size="14" text-anchor="middle">//</text>
+  <text x="190" y="504" fill="#39ff7a" font-size="12" text-anchor="middle">tp = 60 µs</text>
+  <path d="M280 480V575" stroke="#555" stroke-width="1" stroke-dasharray="3 3"/>
+  <path d="M400 480V575" stroke="#ff6b6b" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <path d="M460 480V575" stroke="#ffd27a" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="396" y="572" fill="#ff6b6b" font-size="12" text-anchor="end">S1: +40 µs</text>
+  <text x="466" y="572" fill="#ffd27a" font-size="12">S2: +60 µs</text>
+  <path d="M280 590H400" stroke="#ff6b6b" stroke-width="1.5" marker-start="url(#a)" marker-end="url(#a)"/>
+  <path d="M280 604H460" stroke="#ffd27a" stroke-width="1.5" marker-start="url(#b)" marker-end="url(#b)"/>
+  <text x="590" y="540" fill="#d8ffe0" font-size="12">A következő impulzus</text>
+  <text x="590" y="556" fill="#d8ffe0" font-size="12">a periódus (T) végén indul;</text>
+  <text x="590" y="572" fill="#d8ffe0" font-size="12">tp + S2 + 13 + 10 µs ≤ T</text>
+  <text x="590" y="588" fill="#d8ffe0" font-size="12">(lásd README 2.1).</text>
+</svg>

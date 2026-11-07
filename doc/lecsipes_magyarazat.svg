@@ -1,0 +1,1687 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1400"
+   height="1330"
+   viewBox="0 0 1400 1330"
+   font-family="Segoe UI, Arial, sans-serif"
+   version="1.1"
+   id="svg135"
+   sodipodi:docname="lecsipes_magyarazat-eredeti.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs135" />
+  <sodipodi:namedview
+     id="namedview135"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.481203"
+     inkscape:cx="409.47879"
+     inkscape:cy="169.87727"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg135" />
+  <rect
+     width="100%"
+     height="100%"
+     fill="#fff"
+     id="rect1" />
+  <rect
+     x="6"
+     y="6"
+     width="1388"
+     height="1318"
+     fill="none"
+     stroke="#999"
+     id="rect2" />
+  <text
+     x="24"
+     y="34"
+     font-size="20px"
+     font-weight="bold"
+     fill="#111111"
+     id="text2">A flyback lecsípése: mi a jó és mi a rossz</text>
+  <text
+     x="24"
+     y="70"
+     font-size="16"
+     text-anchor="start"
+     fill="#111"
+     font-weight="bold"
+     id="text3">Mi az a flyback, és miért kell lecsípni?</text>
+  <polyline
+     points="60,110 340,110"
+     fill="none"
+     stroke="#0b4fa8"
+     stroke-width="2"
+     stroke-linejoin="round"
+     id="polyline3" />
+  <text
+     x="60"
+     y="100"
+     font-size="12"
+     text-anchor="start"
+     fill="#b71c1c"
+     font-weight="bold"
+     id="text4">+12 V (akku)</text>
+  <g
+     transform="translate(150,155) rotate(90)"
+     fill="none"
+     stroke="#222"
+     stroke-width="2"
+     id="g5">
+    <line
+       x1="-45"
+       y1="0"
+       x2="-18"
+       y2="0"
+       stroke="#0b4fa8"
+       id="line4" />
+    <line
+       x1="18"
+       y1="0"
+       x2="45"
+       y2="0"
+       stroke="#0b4fa8"
+       id="line5" />
+    <path
+       d="M -18,0 a4.5,4.5 0 0 1 9,0 a4.5,4.5 0 0 1 9,0 a4.5,4.5 0 0 1 9,0 a4.5,4.5 0 0 1 9,0"
+       id="path5" />
+  </g>
+  <text
+     x="132"
+     y="151"
+     font-size="12px"
+     text-anchor="end"
+     fill="#111111"
+     font-weight="bold"
+     id="text5">Ltx1</text>
+  <text
+     x="132"
+     y="166"
+     font-size="12"
+     text-anchor="end"
+     fill="#111"
+     id="text6">Tx tekercs</text>
+  <circle
+     cx="150"
+     cy="110"
+     r="4"
+     fill="#0b4fa8"
+     id="circle6" />
+  <circle
+     cx="150"
+     cy="200"
+     r="4"
+     fill="#0b4fa8"
+     id="circle7" />
+  <polyline
+     points="150,200 150,235"
+     fill="none"
+     stroke="#0b4fa8"
+     stroke-width="2"
+     stroke-linejoin="round"
+     id="polyline7" />
+  <polyline
+     points="150,235 172,258"
+     fill="none"
+     stroke="#222"
+     stroke-width="2"
+     stroke-linejoin="round"
+     id="polyline8" />
+  <polyline
+     points="150,272 150,300"
+     fill="none"
+     stroke="#0b4fa8"
+     stroke-width="2"
+     stroke-linejoin="round"
+     id="polyline9" />
+  <polyline
+     points="150,300 150,308"
+     fill="none"
+     stroke="#0b4fa8"
+     stroke-width="2"
+     stroke-linejoin="round"
+     id="polyline10" />
+  <polyline
+     points="138,308 162,308"
+     fill="none"
+     stroke="#222"
+     stroke-width="2"
+     stroke-linejoin="round"
+     id="polyline11" />
+  <polyline
+     points="142,313 158,313"
+     fill="none"
+     stroke="#222"
+     stroke-width="2"
+     stroke-linejoin="round"
+     id="polyline12" />
+  <polyline
+     points="146,318 154,318"
+     fill="none"
+     stroke="#222"
+     stroke-width="2"
+     stroke-linejoin="round"
+     id="polyline13" />
+  <text
+     x="180"
+     y="250"
+     font-size="12"
+     text-anchor="start"
+     fill="#111"
+     font-weight="bold"
+     id="text13">Q1 (kapcsoló)</text>
+  <text
+     x="180"
+     y="266"
+     font-size="11"
+     text-anchor="start"
+     fill="#555"
+     id="text14">kikapcsolt állapot</text>
+  <polyline
+     points="150,200 290,200"
+     fill="none"
+     stroke="#0b4fa8"
+     stroke-width="2"
+     stroke-linejoin="round"
+     id="polyline14" />
+  <circle
+     cx="290"
+     cy="200"
+     r="4"
+     fill="#0b4fa8"
+     id="circle14" />
+  <g
+     transform="translate(290,225) rotate(90)"
+     fill="none"
+     stroke="#222"
+     stroke-width="2"
+     id="g16">
+    <line
+       x1="-25"
+       y1="0"
+       x2="-10"
+       y2="0"
+       stroke="#0b4fa8"
+       id="line14" />
+    <line
+       x1="10"
+       y1="0"
+       x2="25"
+       y2="0"
+       stroke="#0b4fa8"
+       id="line15" />
+    <polygon
+       points="-8,-9 -8,9 8,0"
+       fill="#fff"
+       id="polygon15" />
+    <line
+       x1="8"
+       y1="-9"
+       x2="8"
+       y2="9"
+       id="line16" />
+  </g>
+  <text
+     x="308"
+     y="221"
+     font-size="12px"
+     text-anchor="start"
+     fill="#111111"
+     font-weight="bold"
+     id="text16"><tspan
+       sodipodi:role="line"
+       id="tspan135"
+       x="308"
+       y="221">D1</tspan><tspan
+       sodipodi:role="line"
+       id="tspan136"
+       x="308"
+       y="236" /></text>
+  <g
+     transform="translate(290,280) rotate(-90)"
+     fill="none"
+     stroke="#222"
+     stroke-width="2"
+     id="g18">
+    <line
+       x1="-30"
+       y1="0"
+       x2="-12"
+       y2="0"
+       stroke="#0b4fa8"
+       id="line17" />
+    <line
+       x1="12"
+       y1="0"
+       x2="30"
+       y2="0"
+       stroke="#0b4fa8"
+       id="line18" />
+    <polygon
+       points="-8,-9 -8,9 8,0"
+       fill="#fff"
+       id="polygon18" />
+    <polyline
+       points="4,-9 8,-9 8,9 12,9"
+       id="polyline18" />
+  </g>
+  <text
+     x="308"
+     y="276"
+     font-size="12px"
+     text-anchor="start"
+     fill="#111111"
+     font-weight="bold"
+     id="text18">D2</text>
+  <polyline
+     points="290,310 290,318"
+     fill="none"
+     stroke="#0b4fa8"
+     stroke-width="2"
+     stroke-linejoin="round"
+     id="polyline19" />
+  <polyline
+     points="278,318 302,318"
+     fill="none"
+     stroke="#222"
+     stroke-width="2"
+     stroke-linejoin="round"
+     id="polyline20" />
+  <polyline
+     points="282,323 298,323"
+     fill="none"
+     stroke="#222"
+     stroke-width="2"
+     stroke-linejoin="round"
+     id="polyline21" />
+  <polyline
+     points="286,328 294,328"
+     fill="none"
+     stroke="#222"
+     stroke-width="2"
+     stroke-linejoin="round"
+     id="polyline22" />
+  <text
+     x="166"
+     y="160"
+     font-size="12"
+     text-anchor="start"
+     fill="#ef6c00"
+     font-weight="bold"
+     id="text22">↓ áram</text>
+  <text
+     x="200"
+     y="222"
+     font-size="11"
+     text-anchor="start"
+     fill="#555"
+     id="text23">lecsípő ág</text>
+  <text
+     x="60"
+     y="330"
+     font-size="11"
+     text-anchor="start"
+     fill="#555"
+     id="text24">A drain a tekercs alsó vége (a Q1-nél).</text>
+  <text
+     x="430"
+     y="105"
+     font-size="14"
+     fill="#111"
+     id="text25"><tspan
+   font-weight="bold"
+   id="tspan24">1. Bekapcsolt Q1:</tspan> a tekercsen az áram a tp alatt nő (I ≈ U·tp/L ≈ 0,5–0,7 A 9–12 V-on), a tekercs mágneses energiát tárol (mint egy mozgó nehéz kerék).</text>
+  <text
+     x="430"
+     y="131"
+     font-size="14"
+     fill="#111"
+     id="text26"><tspan
+   font-weight="bold"
+   id="tspan25">2. Q1 kikapcsol:</tspan> az áram nem tud azonnal megszűnni, ezért a tekercs &quot;visszaüt&quot;: akkora feszültséget hoz létre, amennyi kell az áram</text>
+  <text
+     x="430"
+     y="157"
+     font-size="14"
+     fill="#111"
+     id="text27"><tspan
+   font-weight="bold"
+   id="tspan26" /> fenntartásához. Ez a flyback-tüske: U = L · ΔI / Δt. Gyors kikapcsolásnál több száz voltig is eljuthat.</text>
+  <text
+     x="430"
+     y="183"
+     font-size="14"
+     fill="#111"
+     id="text28"><tspan
+   font-weight="bold"
+   id="tspan27">3. Lecsípés nélkül</tspan> a drain tüskéje meghaladja a Q1 határát (55 V), a MOSFET elromlik.</text>
+  <text
+     x="430"
+     y="209"
+     font-size="14px"
+     fill="#111111"
+     id="text29">4. Lecsípéssel: a D2 zener (≈ 36 V) a drain és a föld között addig nem vezet, amíg a feszültség el nem éri a határt.</text>
+  <text
+     x="430"
+     y="235"
+     font-size="14"
+     fill="#111"
+     id="text30"><tspan
+   font-weight="bold"
+   id="tspan29" /> Ott &quot;kinyit&quot;, mint egy túlfolyó: a feszültség nem nő tovább, és az áram biztonságosan a földbe folyik le.</text>
+  <text
+     x="430"
+     y="261"
+     font-size="14"
+     fill="#111"
+     id="text31"><tspan
+   font-weight="bold"
+   id="tspan30">A cél:</tspan> a lecsípés elég magas legyen, hogy az áram gyorsan (példa: 9–12 V-on, 38 V lecsípésnél ≈ 19–28 µs) lecsengjen, de a Q1 határa (55 V) alatt maradjon.</text>
+  <text
+     x="430"
+     y="297"
+     font-size="13"
+     text-anchor="start"
+     fill="#555"
+     id="text32">Hogyan olvasd az ábrákat: a kék vonal a Q1 drain feszültsége, a narancs a tekercs árama (csak az alakja számít).</text>
+  <text
+     x="430"
+     y="317"
+     font-size="13"
+     text-anchor="start"
+     fill="#555"
+     id="text33">Az ábrák szemléltetők (számolt, idealizált alakok), nem mért adatok.</text>
+  <rect
+     x="30"
+     y="370"
+     width="640"
+     height="360"
+     fill="#fff"
+     stroke="#c62828"
+     stroke-width="2.5"
+     rx="6"
+     id="rect33" />
+  <rect
+     x="30"
+     y="370"
+     width="640"
+     height="32"
+     fill="#c62828"
+     rx="6"
+     id="rect34" />
+  <text
+     x="44"
+     y="392"
+     font-size="15"
+     text-anchor="start"
+     fill="#fff"
+     font-weight="bold"
+     id="text34">A) Nincs lecsípés</text>
+  <text
+     x="656"
+     y="392"
+     font-size="15"
+     text-anchor="end"
+     fill="#fff"
+     font-weight="bold"
+     id="text35">ROSSZ</text>
+  <rect
+     x="90"
+     y="511.25"
+     width="560"
+     height="47.5"
+     fill="#c8e6c9"
+     opacity="0.6"
+     id="rect35" />
+  <text
+     x="646"
+     y="524.25"
+     font-size="11"
+     text-anchor="end"
+     fill="#2e7d32"
+     id="text36">jó tartomány 30–50 V</text>
+  <line
+     x1="90"
+     y1="499.375"
+     x2="650"
+     y2="499.375"
+     stroke="#c62828"
+     stroke-dasharray="6,4"
+     stroke-width="1.5"
+     id="line36" />
+  <text
+     x="94"
+     y="495.375"
+     font-size="11"
+     text-anchor="start"
+     fill="#c62828"
+     id="text37">Q1 határa: 55 V</text>
+  <line
+     x1="90"
+     y1="601.5"
+     x2="650"
+     y2="601.5"
+     stroke="#1565c0"
+     stroke-dasharray="6,4"
+     stroke-width="1.5"
+     id="line37" />
+  <text
+     x="94"
+     y="597.5"
+     font-size="11"
+     text-anchor="start"
+     fill="#1565c0"
+     id="text38">akku: 12 V</text>
+  <polyline
+     points="90,440 90,630 650,630"
+     fill="none"
+     stroke="#333"
+     stroke-width="1.5"
+     stroke-linejoin="round"
+     id="polyline38" />
+  <text
+     x="84"
+     y="634"
+     font-size="11"
+     text-anchor="end"
+     fill="#555"
+     id="text39">0</text>
+  <text
+     x="84"
+     y="586.5"
+     font-size="11"
+     text-anchor="end"
+     fill="#555"
+     id="text40">20</text>
+  <text
+     x="84"
+     y="539"
+     font-size="11"
+     text-anchor="end"
+     fill="#555"
+     id="text41">40</text>
+  <text
+     x="84"
+     y="491.5"
+     font-size="11"
+     text-anchor="end"
+     fill="#555"
+     id="text42">60</text>
+  <text
+     x="84"
+     y="444"
+     font-size="11"
+     text-anchor="end"
+     fill="#555"
+     id="text43">80</text>
+  <polyline
+     points="90,630 90,634"
+     fill="none"
+     stroke="#333"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="polyline43" />
+  <text
+     x="90"
+     y="647"
+     font-size="11"
+     text-anchor="middle"
+     fill="#555"
+     id="text44">-20</text>
+  <polyline
+     points="170,630 170,634"
+     fill="none"
+     stroke="#333"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="polyline44" />
+  <text
+     x="170"
+     y="647"
+     font-size="11"
+     text-anchor="middle"
+     fill="#555"
+     id="text45">0</text>
+  <polyline
+     points="250,630 250,634"
+     fill="none"
+     stroke="#333"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="polyline45" />
+  <text
+     x="250"
+     y="647"
+     font-size="11"
+     text-anchor="middle"
+     fill="#555"
+     id="text46">20</text>
+  <polyline
+     points="330,630 330,634"
+     fill="none"
+     stroke="#333"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="polyline46" />
+  <text
+     x="330"
+     y="647"
+     font-size="11"
+     text-anchor="middle"
+     fill="#555"
+     id="text47">40</text>
+  <polyline
+     points="410,630 410,634"
+     fill="none"
+     stroke="#333"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="polyline47" />
+  <text
+     x="410"
+     y="647"
+     font-size="11"
+     text-anchor="middle"
+     fill="#555"
+     id="text48">60</text>
+  <polyline
+     points="490,630 490,634"
+     fill="none"
+     stroke="#333"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="polyline48" />
+  <text
+     x="490"
+     y="647"
+     font-size="11"
+     text-anchor="middle"
+     fill="#555"
+     id="text49">80</text>
+  <polyline
+     points="570,630 570,634"
+     fill="none"
+     stroke="#333"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="polyline49" />
+  <text
+     x="570"
+     y="647"
+     font-size="11"
+     text-anchor="middle"
+     fill="#555"
+     id="text50">100</text>
+  <polyline
+     points="650,630 650,634"
+     fill="none"
+     stroke="#333"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="polyline50" />
+  <text
+     x="650"
+     y="647"
+     font-size="11"
+     text-anchor="middle"
+     fill="#555"
+     id="text51">120</text>
+  <text
+     x="650"
+     y="662"
+     font-size="11"
+     text-anchor="end"
+     fill="#555"
+     id="text52">idő a Q1 kikapcsolásához képest (µs)</text>
+  <text
+     x="46"
+     y="432"
+     font-size="11"
+     text-anchor="start"
+     fill="#555"
+     id="text53">drain feszültség (V)</text>
+  <line
+     x1="170"
+     y1="440"
+     x2="170"
+     y2="630"
+     stroke="#777"
+     stroke-dasharray="3,3"
+     id="line53" />
+  <text
+     x="166"
+     y="452"
+     font-size="11"
+     text-anchor="end"
+     fill="#555"
+     id="text54">Q1 kikapcsol</text>
+  <line
+     x1="330"
+     y1="440"
+     x2="330"
+     y2="630"
+     stroke="#777"
+     stroke-dasharray="3,3"
+     id="line54" />
+  <text
+     x="334"
+     y="452"
+     font-size="11"
+     text-anchor="start"
+     fill="#555"
+     id="text55">S1 mintavétel (alap: 40 µs)</text>
+  <polyline
+     points="90,558.75 170,558.75 174,630 650,630"
+     fill="none"
+     stroke="#ef6c00"
+     stroke-width="2"
+     stroke-linejoin="round"
+     id="polyline55" />
+  <polyline
+     points="90,629.288 170,629.288 171.6,440 177.2,440 180.4,620.5 188,530.25 196,622.875 206,568.25 222,613.375 246,589.625 274,605.062 310,600.312 410,601.5 650,601.5"
+     fill="none"
+     stroke="#1a237e"
+     stroke-width="3"
+     stroke-linejoin="round"
+     id="polyline56" />
+  <text
+     x="44"
+     y="692"
+     font-size="12"
+     text-anchor="start"
+     fill="#222"
+     id="text56">A tüske sok száz volt is lehet (az ábrán a skála fölé lóg), a Q1 lavinába megy és megsérül.</text>
+  <text
+     x="44"
+     y="709"
+     font-size="12"
+     text-anchor="start"
+     fill="#222"
+     id="text57">A tüske után hosszan, csillapítatlanul rezeg: ez a mérést is zavarja.</text>
+  <rect
+     x="710"
+     y="370"
+     width="640"
+     height="360"
+     fill="#fff"
+     stroke="#c62828"
+     stroke-width="2.5"
+     rx="6"
+     id="rect57" />
+  <rect
+     x="710"
+     y="370"
+     width="640"
+     height="32"
+     fill="#c62828"
+     rx="6"
+     id="rect58" />
+  <text
+     x="724"
+     y="392"
+     font-size="15"
+     text-anchor="start"
+     fill="#fff"
+     font-weight="bold"
+     id="text58">B) Túl magas lecsípés (pl. 4 zener, ≈ 62 V)</text>
+  <text
+     x="1336"
+     y="392"
+     font-size="15"
+     text-anchor="end"
+     fill="#fff"
+     font-weight="bold"
+     id="text59">ROSSZ</text>
+  <rect
+     x="770"
+     y="511.25"
+     width="560"
+     height="47.5"
+     fill="#c8e6c9"
+     opacity="0.6"
+     id="rect59" />
+  <text
+     x="1326"
+     y="524.25"
+     font-size="11"
+     text-anchor="end"
+     fill="#2e7d32"
+     id="text60">jó tartomány 30–50 V</text>
+  <line
+     x1="770"
+     y1="499.375"
+     x2="1330"
+     y2="499.375"
+     stroke="#c62828"
+     stroke-dasharray="6,4"
+     stroke-width="1.5"
+     id="line60" />
+  <text
+     x="774"
+     y="495.375"
+     font-size="11"
+     text-anchor="start"
+     fill="#c62828"
+     id="text61">Q1 határa: 55 V</text>
+  <line
+     x1="770"
+     y1="601.5"
+     x2="1330"
+     y2="601.5"
+     stroke="#1565c0"
+     stroke-dasharray="6,4"
+     stroke-width="1.5"
+     id="line61" />
+  <text
+     x="774"
+     y="597.5"
+     font-size="11"
+     text-anchor="start"
+     fill="#1565c0"
+     id="text62">akku: 12 V</text>
+  <polyline
+     points="770,440 770,630 1330,630"
+     fill="none"
+     stroke="#333"
+     stroke-width="1.5"
+     stroke-linejoin="round"
+     id="polyline62" />
+  <text
+     x="764"
+     y="634"
+     font-size="11"
+     text-anchor="end"
+     fill="#555"
+     id="text63">0</text>
+  <text
+     x="764"
+     y="586.5"
+     font-size="11"
+     text-anchor="end"
+     fill="#555"
+     id="text64">20</text>
+  <text
+     x="764"
+     y="539"
+     font-size="11"
+     text-anchor="end"
+     fill="#555"
+     id="text65">40</text>
+  <text
+     x="764"
+     y="491.5"
+     font-size="11"
+     text-anchor="end"
+     fill="#555"
+     id="text66">60</text>
+  <text
+     x="764"
+     y="444"
+     font-size="11"
+     text-anchor="end"
+     fill="#555"
+     id="text67">80</text>
+  <polyline
+     points="770,630 770,634"
+     fill="none"
+     stroke="#333"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="polyline67" />
+  <text
+     x="770"
+     y="647"
+     font-size="11"
+     text-anchor="middle"
+     fill="#555"
+     id="text68">-20</text>
+  <polyline
+     points="850,630 850,634"
+     fill="none"
+     stroke="#333"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="polyline68" />
+  <text
+     x="850"
+     y="647"
+     font-size="11"
+     text-anchor="middle"
+     fill="#555"
+     id="text69">0</text>
+  <polyline
+     points="930,630 930,634"
+     fill="none"
+     stroke="#333"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="polyline69" />
+  <text
+     x="930"
+     y="647"
+     font-size="11"
+     text-anchor="middle"
+     fill="#555"
+     id="text70">20</text>
+  <polyline
+     points="1010,630 1010,634"
+     fill="none"
+     stroke="#333"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="polyline70" />
+  <text
+     x="1010"
+     y="647"
+     font-size="11"
+     text-anchor="middle"
+     fill="#555"
+     id="text71">40</text>
+  <polyline
+     points="1090,630 1090,634"
+     fill="none"
+     stroke="#333"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="polyline71" />
+  <text
+     x="1090"
+     y="647"
+     font-size="11"
+     text-anchor="middle"
+     fill="#555"
+     id="text72">60</text>
+  <polyline
+     points="1170,630 1170,634"
+     fill="none"
+     stroke="#333"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="polyline72" />
+  <text
+     x="1170"
+     y="647"
+     font-size="11"
+     text-anchor="middle"
+     fill="#555"
+     id="text73">80</text>
+  <polyline
+     points="1250,630 1250,634"
+     fill="none"
+     stroke="#333"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="polyline73" />
+  <text
+     x="1250"
+     y="647"
+     font-size="11"
+     text-anchor="middle"
+     fill="#555"
+     id="text74">100</text>
+  <polyline
+     points="1330,630 1330,634"
+     fill="none"
+     stroke="#333"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="polyline74" />
+  <text
+     x="1330"
+     y="647"
+     font-size="11"
+     text-anchor="middle"
+     fill="#555"
+     id="text75">120</text>
+  <text
+     x="1330"
+     y="662"
+     font-size="11"
+     text-anchor="end"
+     fill="#555"
+     id="text76">idő a Q1 kikapcsolásához képest (µs)</text>
+  <text
+     x="726"
+     y="432"
+     font-size="11"
+     text-anchor="start"
+     fill="#555"
+     id="text77">drain feszültség (V)</text>
+  <line
+     x1="850"
+     y1="440"
+     x2="850"
+     y2="630"
+     stroke="#777"
+     stroke-dasharray="3,3"
+     id="line77" />
+  <text
+     x="846"
+     y="452"
+     font-size="11"
+     text-anchor="end"
+     fill="#555"
+     id="text78">Q1 kikapcsol</text>
+  <line
+     x1="1010"
+     y1="440"
+     x2="1010"
+     y2="630"
+     stroke="#777"
+     stroke-dasharray="3,3"
+     id="line78" />
+  <text
+     x="1014"
+     y="452"
+     font-size="11"
+     text-anchor="start"
+     fill="#555"
+     id="text79">S1 mintavétel (alap: 40 µs)</text>
+  <polyline
+     points="770,558.75 850,558.75 906,630 1330,630"
+     fill="none"
+     stroke="#ef6c00"
+     stroke-width="2"
+     stroke-linejoin="round"
+     id="polyline79" />
+  <polyline
+     points="770,629.288 850,629.288 851.6,482.75 906,482.75 910,601.5 918,589.625 930,605.062 946,600.55 978,601.5 1330,601.5"
+     fill="none"
+     stroke="#1a237e"
+     stroke-width="3"
+     stroke-linejoin="round"
+     id="polyline80" />
+  <text
+     x="724"
+     y="692"
+     font-size="12"
+     text-anchor="start"
+     fill="#222"
+     id="text80">A tető 55 V fölött van: a Q1 Vds,max határát túllépi, rövid idő alatt is károsodhat.</text>
+  <text
+     x="724"
+     y="709"
+     font-size="12"
+     text-anchor="start"
+     fill="#222"
+     id="text81">Az áram gyorsan lecseng, de ezt a nyereséget nem éri meg a MOSFET kockázata.</text>
+  <rect
+     x="30"
+     y="750"
+     width="640"
+     height="360"
+     fill="#fff"
+     stroke="#2e7d32"
+     stroke-width="2.5"
+     rx="6"
+     id="rect81" />
+  <rect
+     x="30"
+     y="750"
+     width="640"
+     height="32"
+     fill="#2e7d32"
+     rx="6"
+     id="rect82" />
+  <text
+     x="44"
+     y="772"
+     font-size="15"
+     text-anchor="start"
+     fill="#fff"
+     font-weight="bold"
+     id="text82">C) Jó lecsípés (≈ 36–39 V)</text>
+  <text
+     x="656"
+     y="772"
+     font-size="15"
+     text-anchor="end"
+     fill="#fff"
+     font-weight="bold"
+     id="text83">JÓ</text>
+  <rect
+     x="90"
+     y="891.25"
+     width="560"
+     height="47.5"
+     fill="#c8e6c9"
+     opacity="0.6"
+     id="rect83" />
+  <text
+     x="646"
+     y="904.25"
+     font-size="11"
+     text-anchor="end"
+     fill="#2e7d32"
+     id="text84">jó tartomány 30–50 V</text>
+  <line
+     x1="90"
+     y1="879.375"
+     x2="650"
+     y2="879.375"
+     stroke="#c62828"
+     stroke-dasharray="6,4"
+     stroke-width="1.5"
+     id="line84" />
+  <text
+     x="94"
+     y="875.375"
+     font-size="11"
+     text-anchor="start"
+     fill="#c62828"
+     id="text85">Q1 határa: 55 V</text>
+  <line
+     x1="90"
+     y1="981.5"
+     x2="650"
+     y2="981.5"
+     stroke="#1565c0"
+     stroke-dasharray="6,4"
+     stroke-width="1.5"
+     id="line85" />
+  <text
+     x="94"
+     y="977.5"
+     font-size="11"
+     text-anchor="start"
+     fill="#1565c0"
+     id="text86">akku: 12 V</text>
+  <polyline
+     points="90,820 90,1010 650,1010"
+     fill="none"
+     stroke="#333"
+     stroke-width="1.5"
+     stroke-linejoin="round"
+     id="polyline86" />
+  <text
+     x="84"
+     y="1014"
+     font-size="11"
+     text-anchor="end"
+     fill="#555"
+     id="text87">0</text>
+  <text
+     x="84"
+     y="966.5"
+     font-size="11"
+     text-anchor="end"
+     fill="#555"
+     id="text88">20</text>
+  <text
+     x="84"
+     y="919"
+     font-size="11"
+     text-anchor="end"
+     fill="#555"
+     id="text89">40</text>
+  <text
+     x="84"
+     y="871.5"
+     font-size="11"
+     text-anchor="end"
+     fill="#555"
+     id="text90">60</text>
+  <text
+     x="84"
+     y="824"
+     font-size="11"
+     text-anchor="end"
+     fill="#555"
+     id="text91">80</text>
+  <polyline
+     points="90,1010 90,1014"
+     fill="none"
+     stroke="#333"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="polyline91" />
+  <text
+     x="90"
+     y="1027"
+     font-size="11"
+     text-anchor="middle"
+     fill="#555"
+     id="text92">-20</text>
+  <polyline
+     points="170,1010 170,1014"
+     fill="none"
+     stroke="#333"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="polyline92" />
+  <text
+     x="170"
+     y="1027"
+     font-size="11"
+     text-anchor="middle"
+     fill="#555"
+     id="text93">0</text>
+  <polyline
+     points="250,1010 250,1014"
+     fill="none"
+     stroke="#333"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="polyline93" />
+  <text
+     x="250"
+     y="1027"
+     font-size="11"
+     text-anchor="middle"
+     fill="#555"
+     id="text94">20</text>
+  <polyline
+     points="330,1010 330,1014"
+     fill="none"
+     stroke="#333"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="polyline94" />
+  <text
+     x="330"
+     y="1027"
+     font-size="11"
+     text-anchor="middle"
+     fill="#555"
+     id="text95">40</text>
+  <polyline
+     points="410,1010 410,1014"
+     fill="none"
+     stroke="#333"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="polyline95" />
+  <text
+     x="410"
+     y="1027"
+     font-size="11"
+     text-anchor="middle"
+     fill="#555"
+     id="text96">60</text>
+  <polyline
+     points="490,1010 490,1014"
+     fill="none"
+     stroke="#333"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="polyline96" />
+  <text
+     x="490"
+     y="1027"
+     font-size="11"
+     text-anchor="middle"
+     fill="#555"
+     id="text97">80</text>
+  <polyline
+     points="570,1010 570,1014"
+     fill="none"
+     stroke="#333"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="polyline97" />
+  <text
+     x="570"
+     y="1027"
+     font-size="11"
+     text-anchor="middle"
+     fill="#555"
+     id="text98">100</text>
+  <polyline
+     points="650,1010 650,1014"
+     fill="none"
+     stroke="#333"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="polyline98" />
+  <text
+     x="650"
+     y="1027"
+     font-size="11"
+     text-anchor="middle"
+     fill="#555"
+     id="text99">120</text>
+  <text
+     x="650"
+     y="1042"
+     font-size="11"
+     text-anchor="end"
+     fill="#555"
+     id="text100">idő a Q1 kikapcsolásához képest (µs)</text>
+  <text
+     x="46"
+     y="812"
+     font-size="11"
+     text-anchor="start"
+     fill="#555"
+     id="text101">drain feszültség (V)</text>
+  <line
+     x1="170"
+     y1="820"
+     x2="170"
+     y2="1010"
+     stroke="#777"
+     stroke-dasharray="3,3"
+     id="line101" />
+  <text
+     x="166"
+     y="832"
+     font-size="11"
+     text-anchor="end"
+     fill="#555"
+     id="text102">Q1 kikapcsol</text>
+  <line
+     x1="330"
+     y1="820"
+     x2="330"
+     y2="1010"
+     stroke="#777"
+     stroke-dasharray="3,3"
+     id="line102" />
+  <text
+     x="334"
+     y="832"
+     font-size="11"
+     text-anchor="start"
+     fill="#555"
+     id="text103">S1 mintavétel (alap: 40 µs)</text>
+  <polyline
+     points="90,938.75 170,938.75 262,1010 650,1010"
+     fill="none"
+     stroke="#ef6c00"
+     stroke-width="2"
+     stroke-linejoin="round"
+     id="polyline103" />
+  <polyline
+     points="90,1009.29 170,1009.29 171.6,919.75 262,919.75 270,962.5 278,976.75 288,983.875 302,980.788 330,981.5 650,981.5"
+     fill="none"
+     stroke="#1a237e"
+     stroke-width="3"
+     stroke-linejoin="round"
+     id="polyline104" />
+  <text
+     x="44"
+     y="1072"
+     font-size="12"
+     text-anchor="start"
+     fill="#222"
+     id="text104">Lapos tető 36–39 V-on, a Q1 határa (55 V) alatt; számítás szerint ≈ 19–28 µs alatt lecseng.</text>
+  <text
+     x="44"
+     y="1089"
+     font-size="12px"
+     text-anchor="start"
+     fill="#222222"
+     id="text105">Utána sima visszaesés a 12 V-ra (jól beállított R14). Az S1-et (40…120 µs) a lecsengés utánra állítsd.</text>
+  <rect
+     x="710"
+     y="750"
+     width="640"
+     height="360"
+     fill="#fff"
+     stroke="#c62828"
+     stroke-width="2.5"
+     rx="6"
+     id="rect105" />
+  <rect
+     x="710"
+     y="750"
+     width="640"
+     height="32"
+     fill="#c62828"
+     rx="6"
+     id="rect106" />
+  <text
+     x="724"
+     y="772"
+     font-size="15"
+     text-anchor="start"
+     fill="#fff"
+     font-weight="bold"
+     id="text106">D) Túl alacsony lecsípés (pl. 1 zener, ≈ 18 V)</text>
+  <text
+     x="1336"
+     y="772"
+     font-size="15"
+     text-anchor="end"
+     fill="#fff"
+     font-weight="bold"
+     id="text107">ROSSZ</text>
+  <rect
+     x="770"
+     y="891.25"
+     width="560"
+     height="47.5"
+     fill="#c8e6c9"
+     opacity="0.6"
+     id="rect107" />
+  <text
+     x="1326"
+     y="904.25"
+     font-size="11"
+     text-anchor="end"
+     fill="#2e7d32"
+     id="text108">jó tartomány 30–50 V</text>
+  <line
+     x1="770"
+     y1="879.375"
+     x2="1330"
+     y2="879.375"
+     stroke="#c62828"
+     stroke-dasharray="6,4"
+     stroke-width="1.5"
+     id="line108" />
+  <text
+     x="774"
+     y="875.375"
+     font-size="11"
+     text-anchor="start"
+     fill="#c62828"
+     id="text109">Q1 határa: 55 V</text>
+  <line
+     x1="770"
+     y1="981.5"
+     x2="1330"
+     y2="981.5"
+     stroke="#1565c0"
+     stroke-dasharray="6,4"
+     stroke-width="1.5"
+     id="line109" />
+  <text
+     x="774"
+     y="977.5"
+     font-size="11"
+     text-anchor="start"
+     fill="#1565c0"
+     id="text110">akku: 12 V</text>
+  <polyline
+     points="770,820 770,1010 1330,1010"
+     fill="none"
+     stroke="#333"
+     stroke-width="1.5"
+     stroke-linejoin="round"
+     id="polyline110" />
+  <text
+     x="764"
+     y="1014"
+     font-size="11"
+     text-anchor="end"
+     fill="#555"
+     id="text111">0</text>
+  <text
+     x="764"
+     y="966.5"
+     font-size="11"
+     text-anchor="end"
+     fill="#555"
+     id="text112">20</text>
+  <text
+     x="764"
+     y="919"
+     font-size="11"
+     text-anchor="end"
+     fill="#555"
+     id="text113">40</text>
+  <text
+     x="764"
+     y="871.5"
+     font-size="11"
+     text-anchor="end"
+     fill="#555"
+     id="text114">60</text>
+  <text
+     x="764"
+     y="824"
+     font-size="11"
+     text-anchor="end"
+     fill="#555"
+     id="text115">80</text>
+  <polyline
+     points="770,1010 770,1014"
+     fill="none"
+     stroke="#333"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="polyline115" />
+  <text
+     x="770"
+     y="1027"
+     font-size="11"
+     text-anchor="middle"
+     fill="#555"
+     id="text116">-20</text>
+  <polyline
+     points="850,1010 850,1014"
+     fill="none"
+     stroke="#333"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="polyline116" />
+  <text
+     x="850"
+     y="1027"
+     font-size="11"
+     text-anchor="middle"
+     fill="#555"
+     id="text117">0</text>
+  <polyline
+     points="930,1010 930,1014"
+     fill="none"
+     stroke="#333"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="polyline117" />
+  <text
+     x="930"
+     y="1027"
+     font-size="11"
+     text-anchor="middle"
+     fill="#555"
+     id="text118">20</text>
+  <polyline
+     points="1010,1010 1010,1014"
+     fill="none"
+     stroke="#333"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="polyline118" />
+  <text
+     x="1010"
+     y="1027"
+     font-size="11"
+     text-anchor="middle"
+     fill="#555"
+     id="text119">40</text>
+  <polyline
+     points="1090,1010 1090,1014"
+     fill="none"
+     stroke="#333"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="polyline119" />
+  <text
+     x="1090"
+     y="1027"
+     font-size="11"
+     text-anchor="middle"
+     fill="#555"
+     id="text120">60</text>
+  <polyline
+     points="1170,1010 1170,1014"
+     fill="none"
+     stroke="#333"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="polyline120" />
+  <text
+     x="1170"
+     y="1027"
+     font-size="11"
+     text-anchor="middle"
+     fill="#555"
+     id="text121">80</text>
+  <polyline
+     points="1250,1010 1250,1014"
+     fill="none"
+     stroke="#333"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="polyline121" />
+  <text
+     x="1250"
+     y="1027"
+     font-size="11"
+     text-anchor="middle"
+     fill="#555"
+     id="text122">100</text>
+  <polyline
+     points="1330,1010 1330,1014"
+     fill="none"
+     stroke="#333"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="polyline122" />
+  <text
+     x="1330"
+     y="1027"
+     font-size="11"
+     text-anchor="middle"
+     fill="#555"
+     id="text123">120</text>
+  <text
+     x="1330"
+     y="1042"
+     font-size="11"
+     text-anchor="end"
+     fill="#555"
+     id="text124">idő a Q1 kikapcsolásához képest (µs)</text>
+  <text
+     x="726"
+     y="812"
+     font-size="11"
+     text-anchor="start"
+     fill="#555"
+     id="text125">drain feszültség (V)</text>
+  <line
+     x1="850"
+     y1="820"
+     x2="850"
+     y2="1010"
+     stroke="#777"
+     stroke-dasharray="3,3"
+     id="line125" />
+  <text
+     x="846"
+     y="832"
+     font-size="11"
+     text-anchor="end"
+     fill="#555"
+     id="text126">Q1 kikapcsol</text>
+  <line
+     x1="1010"
+     y1="820"
+     x2="1010"
+     y2="1010"
+     stroke="#777"
+     stroke-dasharray="3,3"
+     id="line126" />
+  <text
+     x="1014"
+     y="832"
+     font-size="11"
+     text-anchor="start"
+     fill="#555"
+     id="text127">S1 mintavétel (alap: 40 µs)</text>
+  <polyline
+     points="770,938.75 850,938.75 1250,1010 1330,1010"
+     fill="none"
+     stroke="#ef6c00"
+     stroke-width="2"
+     stroke-linejoin="round"
+     id="polyline127" />
+  <polyline
+     points="770,1009.29 850,1009.29 851.6,967.25 1250,967.25 1266,981.5 1330,981.5"
+     fill="none"
+     stroke="#1a237e"
+     stroke-width="3"
+     stroke-linejoin="round"
+     id="polyline128" />
+  <text
+     x="724"
+     y="1072"
+     font-size="12"
+     text-anchor="start"
+     fill="#222"
+     id="text128">A tüske ártalmatlan, de a tekercs árama túl lassan fogy el (18 V-nál számítás szerint ≈ 60 µs (9 V) … 120 µs (12 V)).</text>
+  <text
+     x="724"
+     y="1089"
+     font-size="12"
+     text-anchor="start"
+     fill="#222"
+     id="text129">Az S1 mintavételkor (alap: 40 µs) még a tekercs árama zavar, az örvényáram &quot;farkát&quot; nem látni.</text>
+  <rect
+     x="30"
+     y="1140"
+     width="1340"
+     height="160"
+     fill="#f5f5f5"
+     stroke="#999"
+     rx="6"
+     id="rect129" />
+  <text
+     x="46"
+     y="1166"
+     font-size="15"
+     text-anchor="start"
+     fill="#111"
+     font-weight="bold"
+     id="text130">Rövid szabályok</text>
+  <text
+     x="46"
+     y="1190"
+     font-size="13px"
+     text-anchor="start"
+     fill="#111111"
+     id="text131">• A lecsípés feszültsége ≈ a zener-sor összege + a D2 nyitófeszültsége (≈ 0,7 V). A 36 V-os zener + D2 ≈ 37–40 V.</text>
+  <text
+     x="46"
+     y="1206"
+     font-size="13"
+     text-anchor="start"
+     fill="#111"
+     id="text132">• Számítás (L = 1 mH, tp = 60 µs, ellenállások nélkül = felső becslés): I ≈ U·tp/L = 0,54 A (9 V) … 0,72 A (12 V); lecsengés t ≈ U·tp/(U_lecsípés − U) ≈ 19…28 µs 38 V-nál.</text>
+  <text
+     x="46"
+     y="1222"
+     font-size="13"
+     text-anchor="start"
+     fill="#111"
+     id="text133">• Magasabb lecsípés → gyorsabb lecsengés, de a Q1 határa (55 V) fölé nem mehetsz. Alacsonyabb lecsípés → lassabb, és az S1 mintavétel (alap: 40 µs) is zavart lehet.</text>
+  <text
+     x="46"
+     y="1238"
+     font-size="13"
+     text-anchor="start"
+     fill="#111"
+     id="text134">• Szkóppal (10×-es szonda, rövid földelés) a drain csúcsa legyen 50 V alatt; a tető lapos, 36–39 V körül, majd sima visszaesés a 12 V-ra.</text>
+  <text
+     x="46"
+     y="1254"
+     font-size="13"
+     text-anchor="start"
+     fill="#111"
+     id="text135">• Ha a T_ON-t növeled, nő a csúcsáram és a tüske energiája: a lecsípést mindig újra ellenőrizd.</text>
+</svg>
