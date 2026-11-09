@@ -331,11 +331,10 @@ static void measureCycle() {
         g_detected = true;
     }
 
-    // Fém-jelleg becslése az s1 előjeléből (heurisztika): a mérések szerint a vas (fogó) pozitív,
-    // a színesfém (bronz) negatív s1-et ad. Az s2/s1 arány a bronznál 0 és 1 között ugrált, ezért nem használható.
+    // Fém-jelleg becslése az s1 előjeléből (heurisztika).
     uint8_t metal = 0;
     if (g_detected) {
-        metal = (s1 > 0.0f) ? 1 : 2;
+        metal = ((s1 < 0.0f) == FERROUS_S1_NEGATIVE) ? 1 : 2;
     }
 
     g_ui.strength = s1;
@@ -584,7 +583,7 @@ static void handleButtons() {
 
 /** @brief Inicializálás bekapcsoláskor: hardver, beállítások, kijelző, nullázás. */
 void setup() {
-    // Használaton kívüli lábak felhúzása; PB5 (D13 / LED_BUILTIN) kivétel, hogy a beépített LED ne világítson.
+    // Használaton kívüli lábak felhúzása; PB5 (D13 / LED_BUILTIN) kivétel, hogy a Nano beépített LED ne világítson.
     PORTB |= 0x1F;                // PB0-PB4 felhúzása
     PORTC |= _BV(PC2) | _BV(PC3); // PC2-PC3 felhúzása
     PORTD |= _BV(PD6) | _BV(PD7); // PD6-PD7 felhúzása

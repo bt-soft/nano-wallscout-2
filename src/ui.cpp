@@ -148,7 +148,7 @@ static void drawZeroingBox() {
 void uiInit() {
     u8g2.begin();
     u8g2.setBusClock(400000); // I2C busz sebesség 400 kHz
-    u8g2.setContrast(180);
+    u8g2.setContrast(220);    // Kijelző kontraszt beállítása
 }
 
 /**

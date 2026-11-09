@@ -9,6 +9,9 @@
    id="svg31"
    sodipodi:docname="rx_szkop.svg"
    inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   inkscape:export-filename="rx_szkop.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -22,15 +25,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="1.1458333"
-     inkscape:cx="450.32727"
-     inkscape:cy="429.81818"
+     inkscape:zoom="1.620453"
+     inkscape:cx="156.12918"
+     inkscape:cy="391.55718"
      inkscape:window-width="1920"
      inkscape:window-height="1027"
-     inkscape:window-x="1912"
+     inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g30" />
+     inkscape:current-layer="g21" />
   <rect
      width="900"
      height="720"
@@ -42,7 +45,13 @@
      fill="#d8ffe0"
      font-size="15"
      font-weight="bold"
-     id="text1">Rx jelút (U2A 1. láb / U2B 7. láb / U2D 14. láb) – 20 µs/osztás, trigger: gate lefutó él (t = 0)</text>
+     id="text1">Rx jelút (U2A/U2B/U2D) – alapérték: tp = 60 µs, f = 500 Hz; trigger: gate lefutó él (t = 0)</text>
+  <text
+     x="20"
+     y="39"
+     fill="#7fd99a"
+     font-size="12"
+     id="text32">T = 2 ms; a lecsengés részlete 20 µs/osztásban látható. A jelalakok szemléltetőek, nem mért adatok.</text>
   <defs
      id="defs1">
     <marker
@@ -192,13 +201,13 @@
        y="180"
        fill="#ff6b6b"
        font-size="12"
-       id="text17">S1</text>
+       id="text17">S1 (40 µs)</text>
     <text
        x="364"
        y="180"
        fill="#ffd27a"
        font-size="12"
-       id="text18">S2</text>
+       id="text18">S2 (60 µs)</text>
     <path
        d="M260 78V105"
        stroke="#d8ffe0"
@@ -213,17 +222,25 @@
        font-size="12"
        id="text19">s1 = S1 − base1 (a jel)</text>
     <text
-       x="290"
-       y="60"
+       x="290.61713"
+       y="41.48666"
        fill="#e7ff5c"
-       font-size="12"
-       id="text20">exponenciális lecsengés a 2,5 V felé (az előjel a fém fajtájától függ);</text>
+       font-size="12px"
+       id="text20">exponenciális lecsengés a 2,5 V felé ;</text>
     <text
        x="290"
-       y="75"
+       y="57.103771"
        fill="#e7ff5c"
-       font-size="12"
-       id="text21">S2 (60 µs) idejére még nem érte el az alapszintet; közelebb a fém = nagyobb, tovább tartó farok</text>
+       font-size="12px"
+       id="text21"><tspan
+         sodipodi:role="line"
+         id="tspan3"
+         x="290"
+         y="57.103771">S2 (+60 µs a TX kikapcsolásától) idejére még nem érte el az alapszintet;</tspan><tspan
+         sodipodi:role="line"
+         id="tspan4"
+         x="290"
+         y="72.103775">közelebb a fém = nagyobb, tovább tartó farok</tspan></text>
   </g>
   <!-- 3. panel: hibák -->
   <g
@@ -291,7 +308,7 @@
        y="128.32727"
        fill="#ff9d9d"
        font-size="12px"
-       id="text28">piros: S1 idejében még kicseng → R14 (Rx csillapítás) hangolása, T_SAMPLE1 növelése</text>
+       id="text28">piros: S1 idejében még kicseng → R14 (Rx csillapítás) hangolása, S1 késleltetés növelése</text>
     <text
        x="320"
        y="38"
@@ -310,5 +327,11 @@
      y="692"
      fill="#d8ffe0"
      font-size="12"
-     id="text31">Y: a névleges erősítés ~121×, ezért az áthallási tüske nagy és rövid lehet; a lényeg, hogy az S1 mintavétel (alap: 40 µs,</text><text x="20" y="706" fill="#d8ffe0" font-size="12">állítható 40…120 µs) előtt visszaálljon a 2,5 V-os alapszintre.</text>
+     id="text31">Y: a névleges erősítés ~121×, ezért az áthallási tüske nagy és rövid lehet; az alap S1 (+40 µs a TX kikapcsolásától)</text>
+  <text
+     x="20"
+     y="706"
+     fill="#d8ffe0"
+     font-size="12"
+     id="text3">előtt álljon vissza a jel a 2,5 V-os alapszint közelébe. S1 tartománya: 40…120 µs; alap S2: +60 µs.</text>
 </svg>

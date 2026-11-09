@@ -123,7 +123,7 @@ Az ATmega328P ADC-je a datasheet szerint 50…200 kHz ADC órajelen ad teljes (1
 * **Jelerősség:** `s1` (a kijelzőn előjelesen, a sávon abszolút értékben).
 * **Csúcs-megtartás és lecsengés:** a legnagyobb |s1| 0,5, másodpercig (`PEAK_HOLD_MS`) változatlanul látszik a sávon függőleges jelzőként, utána exponenciálisan lecseng az aktuális jelszint felé (időállandó 1 s, `PEAK_DECAY_MS`). Új, nagyobb csúcsnál a jelző azonnal felugrik. Így a jelző mozgásából követhető, merre és mennyit változik a jel.
 * **Találat (hiszterézissel):** a találat akkor kapcsol be, ha |s1| ≥ 4 egység (`DETECT_ON_COUNTS`), és csak akkor kapcsol ki, ha 2,5 egység alá csökken (`DETECT_OFF_COUNTS`). A két küszöb közti sávban az állapot változatlan marad, így a zajszint körüli jel nem billegteti a találatot, a mélységbecslést, a fém-jelleget és a hangot. A találat-állapot nullázáskor törlődik. **Kijelzett érték:** a KERESES nagy száma és sávja (valamint a GRAFIKON fejléc száma) találat nélkül 0-t mutat, találatnál a valós előjeles értéket (`UiData::shown`); így nyugalomban a zaj nem billegteti a számot. A soros napló és a grafikon görbéje továbbra is a nyers értéket használja, a csúcsjelző is a nyers amplitúdót követi.
-* **Fém-jelleg (heurisztika):** az `s1` előjele dönt: `s1 > 0` → „Fe (vas)”, `s1 < 0` → „nFe (szines)”. Ez mérésen alapul: a fogó (vas) +44…+80, a bronz −26…−38 egységet adott, az `s2/s1` arány viszont a bronznál 0 és 1 között ugrált, ezért az előző arányos szabályt (`RATIO_FERROUS`) elhagytuk. Korlát: erős vas-találat után a jel rövid ideig negatív irányba lecseng (−3…−5), ilyenkor a kijelzés rövid időre „nFe”-re válthat.
+* **Fém-jelleg (heurisztika):** az `s1` előjele dönt. Az [include/config.h](include/config.h) fájlban a `FERROUS_S1_NEGATIVE` alapértéke `true`: `s1 < 0` → „Fe (vas)”, `s1 > 0` → „nFe (szines)”. `false` esetén a besorolás fordított. A módosításhoz újra kell fordítani és feltölteni a firmware-t; a mért jel előjele nem változik. Az `s2/s1` arány korábbi méréseknél ugrált, ezért a besorolás nem ezen alapul. A korábbi hardverbeállítással a fogó (vas) +44…+80, a bronz −26…−38 egységet adott; az előjel szerinti besorolást az aktuális beállításokkal ismert fémtárgyakon ellenőrizni kell. Az átmeneti lecsengés a kijelzett fém-jelleget is megváltoztathatja.
 * **Mélységbecslés:** `d = d_ref · (A_ref / |s1|)^(1/3)`. A kitevő (3) a `DEPTH_EXPONENT` konstans. Kalibráció nélkül az alapértelmezett `A_ref = 60` egységet használja a 30 mm-hez, ezt `~35mm?` jelzi (a „?” = kalibrálatlan). Kalibráció után `35mm` jelenik meg. Zajszint alatt „--mm”, 150 mm felett „>150mm”.
 * **Aktivitás:** gombnyomás, vagy a jel (DD képernyőn a `dd`) több mint 8 egységnyi változása.
 
@@ -181,6 +181,10 @@ Az alacsonyabb kijelzési érzékenység **kevésbé rángatózóvá teheti a s�
 2. Tartsd az eszközt ismert, ennyire lévő vas fölé (a nullázás után, fémmentes helyen).
 3. A KERESES vagy GRAFIKON képernyőn nyomd hosszan az SW1-et. Az aktuális |s1| lesz a referencia-amplitúdó, az EEPROM-ba mentődik.
 
+#### Betanítás a gyakorlatban
+
+A mélység-kijelzés betanításához először állítsd be annak a próbadarabnak a távolságát, amelyet használni fogsz, majd nullázás után tartsd a műszert a megfelelő mélységben lévő vas fölé. Ha a jel stabil, a KERESES vagy GRAFIKON képernyőn az SW1 hosszú megnyomása eltárolja az aktuális jelerősséget ehhez a távolsághoz. Ezután a készülék ezt a mért referenciajelet használja a mélység becsléséhez; a betanított érték kikapcsolás után is megmarad. A kalibráció a becslést hangolja, nem helyettesíti a fémmentes helyen végzett nullázást.
+
 ### Hang
 
 A jelerősséggel arányos hangmagasság (500…3000 Hz) a Timer2 Fast PWM kimenetén (OC2B, PD3). A hang a találat-állapot fennállása alatt szólal meg (hiszterézissel: 4 egység fölött kezdődik, 2,5 alatt áll le). A hangerőt a kitöltési tényező (6 % / 20 % / 50 %) adja.
@@ -231,7 +235,7 @@ Eseménysorok `#`-tel kezdődnek: `# ZERO`, `# CAL`, `# SET …`, `# SLEEP`, `# 
 
 ## 8. Ismert korlátok, hangolási teendők
 
-* A mélységbecslés és a fém-jelleg közelítő modell; az `DEPTH_EXPONENT` és az alapértelmezett `CAL_AMP_DEF` a valós hardveren, a soros napló alapján hangolandó. A fém-jelleg csak az `s1` előjelén alapul, eddig egy vas (fogó) és egy színesfém (bronz) mérésével igazolva; más fémekkel (alumínium, réz, betonvas) még ellenőrizendő.
+* A mélységbecslés és a fém-jelleg közelítő modell; az `DEPTH_EXPONENT` és az alapértelmezett `CAL_AMP_DEF` a valós hardveren, a soros napló alapján hangolandó. A fém-jelleg csak az `s1` előjelén alapul; a megfordított besorolást az aktuális hardverbeállítással több ismert fémmel is ellenőrizni kell.
 * A tápfeszültség-kijelzés pontossága a 7805 kimenetétől (ADC referencia) függ; szükség esetén a `VREF_MV` / `VBATT_OFFSET_MV` állítható. Ha a mért érték a bemeneti dióda miatt eltér a tápegységétől, az utóbbival korrigálható.
 * A flash kihasználtsága ~90 %, új funkcióknál ezt figyelni kell.
 * A mérés közben szóló buzzer (a meghajtás áramfelvétele) befolyásolhatja a vevőt, ami a hang ki-be kapcsolásakor billegő jelet adhat. Ha ez zavaró, csökkentsd a hangerőt vagy kapcsold ki a hangot (Beállítások → *Hang*).

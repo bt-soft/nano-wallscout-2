@@ -121,6 +121,8 @@
 #define DETECT_ON_COUNTS 4.0f
 /** Találat kikapcsolási küszöbe (ADC egység); a két küszöb közti sáv a hiszterézis, ami megakadályozza a billegést. */
 #define DETECT_OFF_COUNTS 2.5f
+/** A vas jelének előjele: true = negatív S1, false = pozitív S1; az ellenkező előjel színesfém. */
+#define FERROUS_S1_NEGATIVE true
 /** A mélységbecslés modelljének kitevője: amplitúdó ~ 1/mélység^n. */
 #define DEPTH_EXPONENT 3.0f
 /** A becsült mélység felső határa (mm); efölött ">max" jelenik meg. */
