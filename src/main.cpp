@@ -164,8 +164,7 @@ static bool runBurst(uint16_t total, MeasureResult &r) {
 }
 
 /**
- * @brief Kirajzolja az aktuális mérő képernyőt (KERESES vagy GRAFIKON). A nullázás is ezt használja,
- *        így a kijelző terhelése nullázás közben megegyezik a normál üzemével.
+ * @brief Kirajzolja az aktuális mérő képernyőt (KERESES vagy GRAFIKON).
  */
 static void uiDrawMeasureScreen() {
     if (g_screen == SCR_GRAPH) {
@@ -189,8 +188,6 @@ static void zeroNow() {
     memset(g_hist, 0, sizeof(g_hist));
     g_histHead = 0;
 
-    // A nullázás alatt is a normál mérő képernyőt rajzoljuk (nem statikus üzenetet): a kijelző
-    // terhelése így megegyezik a normál üzemével, és a nullpont ugyanazon a jelszinten készül.
     g_ui.strength = 0.0f;
     g_ui.shown = 0.0f;
     g_ui.peak = 0.0f;
@@ -199,7 +196,15 @@ static void zeroNow() {
     g_ui.metal = 0;
     g_ui.saturated = false;
     g_ui.vbattMv = g_vbattMv;
+    g_ui.hist = g_hist;
+    g_ui.histHead = g_histHead;
+    g_ui.graphAbs = g_set.graphAbs;
+
+    // A jelzés után a bázist a jelzés nélküli képernyő mellett mérjük.
     g_ui.zeroing = true;
+    uiDrawMeasureScreen();
+    delay(300);
+    g_ui.zeroing = false;
 
     // Addig mérünk normál ciklusokban, amíg a jel meg nem áll:
     // a legutóbbi ZERO_WINDOW ciklus S1 értékeinek szórása (max-min) ZERO_STABLE_COUNTS alá kerül.

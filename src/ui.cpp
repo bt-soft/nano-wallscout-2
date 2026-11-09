@@ -75,7 +75,7 @@ static void drawP(uint8_t x, uint8_t y, PGM_P p) {
  */
 static void drawTopBar(PGM_P title, uint16_t mv) {
     char b[10];
-    u8g2.setFont(u8g2_font_6x10_tf);
+    u8g2.setFont(u8g2_font_6x10_tr);
     drawP(0, 9, title);
 
     snprintf_P(b, sizeof(b), PSTR("%u.%uV"), mv / 1000, (mv % 1000) / 100);
@@ -116,7 +116,7 @@ static void drawSignedBig(uint8_t x, uint8_t y, int16_t v, bool center) {
     }
 
     u8g2.drawStr(x0 + 8, y, b);
-    u8g2.setFont(u8g2_font_6x10_tf);
+    u8g2.setFont(u8g2_font_6x10_tr);
     if (v < 0) {
         u8g2.drawStr(x0, y - 4, "-");
     }
@@ -128,7 +128,7 @@ static void drawSignedBig(uint8_t x, uint8_t y, int16_t v, bool center) {
  *        A hívás a firstPage()/nextPage() ciklusban, a többi rajzolás után történjen.
  */
 static void drawZeroingBox() {
-    u8g2.setFont(u8g2_font_6x10_tf);
+    u8g2.setFont(u8g2_font_6x10_tr);
     const char *msg = "NULLAZAS...";
     const uint8_t w = u8g2.getStrWidth(msg);
     const uint8_t x0 = (128 - w) / 2;
@@ -160,7 +160,7 @@ void uiInit() {
 void uiMessage(PGM_P fmt, int v) {
     char b[24];
     snprintf_P(b, sizeof(b), fmt, v);
-    u8g2.setFont(u8g2_font_6x10_tf);
+    u8g2.setFont(u8g2_font_6x10_tr);
     const uint8_t w = u8g2.getStrWidth(b);
     u8g2.firstPage();
     do {
@@ -188,7 +188,7 @@ void uiDrawSearch(const UiData &d) {
         drawSignedBig(0, 36, (int16_t)lroundf(d.shown), false);
 
         // Mélység és fém típusa a jobb oldalon
-        u8g2.setFont(u8g2_font_6x10_tf);
+        u8g2.setFont(u8g2_font_6x10_tr);
         if (d.depthMm == DEPTH_NONE) {
             drawP(72, 26, PSTR("--mm"));
         } else if (d.depthMm == DEPTH_OVER) {
@@ -219,7 +219,7 @@ void uiDrawSearch(const UiData &d) {
         }
 
         // Alsó sor: állapot balra, a skála mindig jobbra igazítva (nem ugrál)
-        u8g2.setFont(u8g2_font_5x7_tf);
+        u8g2.setFont(u8g2_font_5x7_tr);
         if (d.saturated) {
             drawP(0, 63, PSTR("TELITES!"));
         } else if (d.metal == 0) {
@@ -250,7 +250,7 @@ void uiDrawGraph(const UiData &d) {
     u8g2.firstPage();
     do {
         drawTopBar(PSTR("GRAFIKON"), d.vbattMv);
-        u8g2.setFont(u8g2_font_6x10_tf);
+        u8g2.setFont(u8g2_font_6x10_tr);
 
         // Mód jelzése a cím és a mért érték között
         drawP(55, 9, d.graphAbs ? PSTR("ABS") : PSTR("SIG"));
@@ -327,10 +327,10 @@ void uiDrawDD(const UiData &d) {
 
         drawSignedBig(0, 34, (int16_t)lroundf(d.dd), false);
         if (d.ddSaturated) {
-            u8g2.setFont(u8g2_font_5x7_tf);
+            u8g2.setFont(u8g2_font_5x7_tr);
             drawP(83, 32, PSTR("TELITES!"));
         } else if (g_ddNullOk) {
-            u8g2.setFont(u8g2_font_5x7_tf);
+            u8g2.setFont(u8g2_font_5x7_tr);
             drawP(88, 32, PSTR("NULL OK"));
         }
 
@@ -343,7 +343,7 @@ void uiDrawDD(const UiData &d) {
         }
         u8g2.drawVLine(64, 37, 18);
 
-        u8g2.setFont(u8g2_font_5x7_tf);
+        u8g2.setFont(u8g2_font_5x7_tr);
 
         snprintf_P(b, sizeof(b), PSTR("B:%d P:%d"), (int)lroundf(d.ddBaseline), (int)lroundf(d.ddPulse));
         u8g2.drawStr(0, 63, b);
@@ -453,7 +453,7 @@ void uiDrawSettings(const Settings &s, uint8_t sel, uint16_t vbatt, bool txTest)
     u8g2.firstPage();
     do {
         drawTopBar(PSTR("BEALLITASOK"), vbatt);
-        u8g2.setFont(u8g2_font_6x10_tf);
+        u8g2.setFont(u8g2_font_6x10_tr);
         for (uint8_t r = 0; r < 5; r++) {
             const uint8_t item = first + r;
             const uint8_t y = 22 + r * 10;
