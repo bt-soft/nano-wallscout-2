@@ -18,7 +18,11 @@ struct UiData {
   float peak;           ///< Csúcs-megtartott |jel|
   uint16_t fullScale;   ///< Az érzékenységhez tartozó teljes skála
   bool graphAbs;        ///< Grafikon módja: igaz = abszolút érték (ABS), hamis = előjeles (SIG)
-  float dd;             ///< Nyers S1 - S2 különbség (előjeles) a DD képernyőhöz
+  float dd;             ///< Simított impulzus alatti eltérés a DD képernyőhöz
+  float ddRaw;          ///< Simítatlan impulzus alatti eltérés
+  float ddBaseline;     ///< TX előtti ADC átlag
+  float ddPulse;        ///< TX alatti ADC átlag
+  bool ddSaturated;     ///< Bármely DD minta ADC telítésben volt
   float s1Raw;          ///< Nyers S1 átlag
   float s2Raw;          ///< Nyers S2 átlag
   int16_t depthMm;      ///< Becsült mélység (mm) vagy DEPTH_NONE / DEPTH_OVER

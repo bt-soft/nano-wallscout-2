@@ -21,7 +21,7 @@ static void (*g_hook)() = nullptr;
 static bool g_ddNullOk = false;
 
 /** A DD sáv skálaértékei (ADC egység), a legkisebb alkalmas kerül kiválasztásra. */
-static const uint16_t kDdScales[] PROGMEM = {10, 20, 50, 100, 200, 500, 1000};
+static const uint16_t kDdScales[] PROGMEM = {50, 100, 200, 500, 1000};
 
 /**
  * @brief Új lap kérése a kijelzőtől, majd a poll hook hívása.
@@ -301,9 +301,11 @@ void uiDrawDD(const UiData &d) {
     const float a = fabsf(d.dd);
 
     // Nullázás ellenőrzése
-    if (a <= DD_OK_COUNTS) {
+    if (d.ddSaturated) {
+        g_ddNullOk = false;
+    } else if (a <= DD_OK_COUNTS && fabsf(d.ddRaw) <= DD_OK_COUNTS) {
         g_ddNullOk = true;
-    } else if (a > DD_OK_COUNTS + 1.0f) {
+    } else if (a > DD_OK_COUNTS + 1.0f || fabsf(d.ddRaw) > DD_OK_COUNTS + 1.0f) {
         g_ddNullOk = false;
     }
 
@@ -324,7 +326,10 @@ void uiDrawDD(const UiData &d) {
         drawTopBar(PSTR("DD BEALLITAS"), d.vbattMv);
 
         drawSignedBig(0, 34, (int16_t)lroundf(d.dd), false);
-        if (g_ddNullOk) {
+        if (d.ddSaturated) {
+            u8g2.setFont(u8g2_font_5x7_tf);
+            drawP(83, 32, PSTR("TELITES!"));
+        } else if (g_ddNullOk) {
             u8g2.setFont(u8g2_font_5x7_tf);
             drawP(88, 32, PSTR("NULL OK"));
         }
@@ -340,8 +345,7 @@ void uiDrawDD(const UiData &d) {
 
         u8g2.setFont(u8g2_font_5x7_tf);
 
-        // A nyers minták folyamatosan láthatók; nincs küszöbfüggő alsó feliratváltás.
-        snprintf_P(b, sizeof(b), PSTR("S1:%d S2:%d"), (int)lroundf(d.s1Raw), (int)lroundf(d.s2Raw));
+        snprintf_P(b, sizeof(b), PSTR("B:%d P:%d"), (int)lroundf(d.ddBaseline), (int)lroundf(d.ddPulse));
         u8g2.drawStr(0, 63, b);
         snprintf_P(b, sizeof(b), PSTR("+-%u"), scale);
         u8g2.drawStr(128 - u8g2.getStrWidth(b), 63, b);

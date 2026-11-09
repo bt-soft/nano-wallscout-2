@@ -119,7 +119,7 @@ Az ATmega328P ADC-je a datasheet szerint 50…200 kHz ADC órajelen ad teljes (1
 
 * `base1`, `base2`: a nullázáskor mért S1, S2 átlag.
 * `s1 = S1 − base1`, `s2 = S2 − base2`: **előjeles jel** (ADC egység; 1 egység ≈ 40 µV a bemeneten a ~121× erősítés mellett).
-* `dd = S1 − S2` (nyers, nem nullázott): a DD képernyő nullponti jele.
+* A keresési mód naplójában `dd = S1 − S2` (nyers, nem nullázott); a DD-képernyő ettől külön, impulzus alatti mérést használ.
 * **Jelerősség:** `s1` (a kijelzőn előjelesen, a sávon abszolút értékben).
 * **Csúcs-megtartás és lecsengés:** a legnagyobb |s1| 0,5, másodpercig (`PEAK_HOLD_MS`) változatlanul látszik a sávon függőleges jelzőként, utána exponenciálisan lecseng az aktuális jelszint felé (időállandó 1 s, `PEAK_DECAY_MS`). Új, nagyobb csúcsnál a jelző azonnal felugrik. Így a jelző mozgásából követhető, merre és mennyit változik a jel.
 * **Találat (hiszterézissel):** a találat akkor kapcsol be, ha |s1| ≥ 4 egység (`DETECT_ON_COUNTS`), és csak akkor kapcsol ki, ha 2,5 egység alá csökken (`DETECT_OFF_COUNTS`). A két küszöb közti sávban az állapot változatlan marad, így a zajszint körüli jel nem billegteti a találatot, a mélységbecslést, a fém-jelleget és a hangot. A találat-állapot nullázáskor törlődik. **Kijelzett érték:** a KERESES nagy száma és sávja (valamint a GRAFIKON fejléc száma) találat nélkül 0-t mutat, találatnál a valós előjeles értéket (`UiData::shown`); így nyugalomban a zaj nem billegteti a számot. A soros napló és a grafikon görbéje továbbra is a nyers értéket használja, a csúcsjelző is a nyers amplitúdót követi.
@@ -147,7 +147,9 @@ Minden képernyő jobb felső sarkában a tápfeszültség látszik; 7,0 V alatt
   * **SIG** – előjeles megjelenítés: a nullvonal a 38. pixelen, a ±teljes skála ±24 pixel, mindkét határt ritkán pöttyözött vonal jelzi.
 
   A skála az érzékenységi fokozatból adódik. A mód vagy az érzékenység váltásakor az előzmények törlődnek, mert más pixel-skálán készültek.
-* **DD BEALLITAS:** nagy előjeles szám (`S1 − S2`) balra igazítva, tőle jobbra `NULL OK` jelzés, ha a simított érték a nullpont közelében van. A jelzés 2 ADC-egységnél kapcsol be, és csak 3 egység fölött kapcsol ki, így nem villog a küszöb körüli zaj miatt. A vízszintes sáv közepe a nullpont; a kijelzett értéket enyhe aluláteresztő szűrő simítja, a soros napló továbbra is a nyers mérést mutatja. A sáv skálája automatikusan választott (±10 … ±1000); a `+−10` például azt jelenti, hogy a sáv közepe 0, bal széle −10, jobb széle +10 ADC-egység. Az alsó sor folyamatosan a pillanatnyi S1/S2 nyers ADC-átlagot és a skálát mutatja. A sáv iránya mutatja, merre kell a tekercseket állítani. Közben a buzzer hangmagassága a nullponttól való távolsággal nő (a nullpont közelében elnémul). Magyarázat: a megfelelő geometriai átfedésnél az adó- és vevőtekercs közti közvetlen csatolás minimális, a nullpont két oldalán a kölcsönös induktivitás előjele ellentétes. A nullpont tehát az az állapot, ahol az S1 és S2 minta különbsége minimális, a konkrét időzítés és analóg jelút mellett.
+* **DD BEALLITAS:** a DD-képernyő saját mérésében az A0 szintjét minden TX-impulzus előtt, majd az impulzus felénél vagy 3/4-énél mintavételezzük, váltakozó impulzusokon. A két időpontban külön átlagoljuk az impulzus alatti és az előtti szinteket; a nagyobb abszolút különbség kerül a kijelzőre, előjelesen, kijelzési simítás után, ADC-egységben. Az alsó sorban az ehhez tartozó két nyers átlag `B` (előtte) és `P` (impulzus alatt) látszik. Egy ciklus összesen 32 impulzusból áll. A korábbi S1 − S2 különbség hamis nullát adhatott, ha mindkét késői minta idejére visszaállt a jel. A normál keresés továbbra is az S1/S2 mintákat használja.
+
+  A `NULL OK` akkor kapcsol be, ha a nyers és a simított különbség is legfeljebb 6 ADC-egység, és akkor kapcsol ki, ha bármelyik 7 fölé kerül. Ha bármelyik DD-minta az ADC tartományának szélére kerül, `TELITES!` látható `NULL OK` helyett. A sáv előjeles, skálája automatikus (±50 … ±1000); a szélesebb minimális skála a nullpont körül kevésbé érzékeny kijelzést ad, de a mért számot nem változtatja meg. A hang a nyers eltéréssel emelkedik, telítéskor maximális hangmagasságú. A nulla a két kiválasztott mintavételi ponton jelenti a közvetlen jel minimumát, nem garantálja a teljes jelalak minimumát vagy azt, hogy egy korábbi erősítőfokozat nem telítődött. A beállítást fémmentes környezetben, a valós készüléken, lehetőleg szkóppal is ellenőrizd. Az A0-n lévő kondenzátor, az impulzushossz és az erősítő viselkedése befolyásolja az eredményt; a mintavételi helyek és a küszöb mérés alapján hangolhatók az `include/config.h` fájlban.
 * **BEALLITASOK:** elemek:
   1. *Impulzus* (20…150 µs, 10 µs-es lépés, alap 60)
   2. *Frekvencia* (250…2500 Hz, 50 Hz-es lépés, alap 500; a felső határ automatikusan csökken, ha az impulzus + S2 késleltetés + ADC konverzió (13 µs) + 10 µs tartalék nem fér bele a periódusba, pl. 60 µs impulzus és 800 µs S2 mellett kb. 1130 Hz. Ha az impulzus vagy S2 növelése miatt a beállított frekvencia a határ fölé kerülne, az a határra csökken)
@@ -207,18 +209,18 @@ Indulás után fejléc és CSV sorok mérési ciklusonként (kb. 5–6 Hz):
 
 | Mező | Jelentés |
 |---|---|
-| `scr` | képernyő: 0 KERESES, 1 GRAFIKON, 2 DD, 3 BEALLITASOK |
+| `scr` | keresési CSV képernyője: 0 KERESES, 1 GRAFIKON |
 | `S1raw`, `S2raw` | nyers ADC átlag (0..1023, nyugalmi ~512) |
 | `base1`, `base2` | nullázáskor eltárolt alapszint |
 | `s1` | `S1raw − base1` (előjeles jel; a kijelzett jelerősség) |
 | `s2` | `(S1raw − S2raw) − (base1 − base2)`, az S1 − S2 különbség nullázott megfelelője |
-| `dd` | `S1raw − S2raw`, a DD képernyő jele |
+| `dd` | `S1raw − S2raw` a keresési mód mérésében; nem a DD-képernyő jele |
 | `peak` | csúcs-megtartott abszolút érték |
 | `depth_mm` | becsült mélység; −1 nincs találat, −2 túl mély |
 | `vbatt_mV` | tápfeszültség |
 | `sat` | 1, ha az ADC telítésben van |
 
-Eseménysorok `#`-tel kezdődnek: `# ZERO`, `# CAL`, `# SET …`, `# SLEEP`, `# WAKE`. A hangoláshoz érdemes a fém fölé húzva figyelni az `s1` előjelét és az `s1`/`S2raw` viszonyát (fém-jelleg küszöb), a `sat` jelzőt és az `S1raw`/`S2raw` nyugalmi értékeit (a trimmerek beállításához).
+Eseménysorok `#`-tel kezdődnek: `# ZERO`, `# CAL`, `# SET …`, `# SLEEP`, `# WAKE`. A DD-képernyőn CSV helyett `# DD baseline=… pulse=… dd=… sat=…` sor jelenik meg a kiválasztott mintapár simítatlan átlagával. A hangoláshoz érdemes a fém fölé húzva figyelni az `s1` előjelét és az `s1`/`S2raw` viszonyát (fém-jelleg küszöb), a `sat` jelzőt és az `S1raw`/`S2raw` nyugalmi értékeit (a trimmerek beállításához).
 
 ## 7. Forrásfájlok
 

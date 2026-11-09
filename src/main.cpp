@@ -47,7 +47,7 @@ static bool g_redraw = true;  ///< A Beállítások képernyőt újra kell rajzo
 
 static float g_base1 = 512.0f;        ///< Nullázott alapszint (S1), nyers ADC egység
 static float g_base2 = 512.0f;        ///< Nullázott alapszint (S2)
-static float g_ddDisplay = 0.0f;      ///< DD képernyőre simított S1-S2 érték
+static float g_ddDisplay = 0.0f;      ///< DD képernyőre simított impulzus alatti eltérés
 static bool g_ddDisplayReady = false; ///< Első DD minta után lesz érvényes a kijelzési szűrő
 
 static UiData g_ui;             ///< A képernyőknek átadott adatok
@@ -303,7 +303,7 @@ static void measureCycle() {
     }
     const uint32_t now = millis();
 
-    // Jelek: nullázott érték (S1, S2), és a nyers különbség a DD képernyőhöz.
+    // Nullázott S1 jel.
     const float s1 = r.s1 - g_base1;
     const float amp = fabsf(s1);
     const uint16_t fs = settingsFullScale(g_set.sensIdx);
@@ -343,15 +343,6 @@ static void measureCycle() {
     g_ui.shown = g_detected ? s1 : 0.0f;
     g_ui.peak = g_peak;
     g_ui.fullScale = fs;
-    const float ddRaw = r.s1 - r.s2;
-    if (!g_ddDisplayReady) {
-        g_ddDisplay = ddRaw;
-        g_ddDisplayReady = true;
-    } else {
-        // Csak a kijelző kap simított értéket; a soros napló továbbra is a nyers DD-t írja.
-        g_ddDisplay += (ddRaw - g_ddDisplay) * 0.20f;
-    }
-    g_ui.dd = g_ddDisplay;
     g_ui.s1Raw = r.s1;
     g_ui.s2Raw = r.s2;
     g_ui.depthMm = estimateDepth(amp);
@@ -371,25 +362,63 @@ static void measureCycle() {
     g_hist[g_histHead] = (int8_t)lroundf(px);
     g_histHead = (g_histHead + 1) % HIST_LEN;
 
-    // Hang: kereső képernyőn a jel erősségével, DD képernyőn a nullponttól való távolsággal emelkedő hangmagasság.
-    const float soundVal = (g_screen == SCR_DD) ? fabsf(g_ui.dd) : amp;
-    const float soundFs = (g_screen == SCR_DD) ? 100.0f : (float)fs;
-    const bool soundOn = (g_screen == SCR_DD) ? (soundVal >= DD_OK_COUNTS) : g_detected;
-    if (soundOn) {
-        const float k = constrain(soundVal / soundFs, 0.0f, 1.0f);
+    if (g_detected) {
+        const float k = constrain(amp / fs, 0.0f, 1.0f);
         buzzerTone((uint16_t)(500.0f + 2500.0f * k), g_set.volume);
     } else {
         buzzerOff();
     }
 
-    // Aktivitás: a jel (DD képernyőn a különbség) jelentős megváltozása.
-    const float act = (g_screen == SCR_DD) ? ddRaw : s1;
-    if (fabsf(act - g_activityRef) > ACTIVITY_DELTA) {
-        g_activityRef = act;
+    if (fabsf(s1 - g_activityRef) > ACTIVITY_DELTA) {
+        g_activityRef = s1;
         markActivity();
     }
 
     logMeasurement();
+}
+
+static void measureDdCycle() {
+    DdMeasureResult r;
+    if (!measureDd(PULSES_PER_CYCLE, r)) {
+        return;
+    }
+    const float ddRaw = r.pulse - r.baseline;
+    g_ui.ddRaw = ddRaw;
+    g_ui.ddBaseline = r.baseline;
+    g_ui.ddPulse = r.pulse;
+    g_ui.ddSaturated = r.saturated;
+    if (r.saturated) {
+        g_ddDisplayReady = false;
+        g_ddDisplay = ddRaw;
+    } else if (!g_ddDisplayReady) {
+        g_ddDisplay = ddRaw;
+        g_ddDisplayReady = true;
+    } else {
+        g_ddDisplay += (ddRaw - g_ddDisplay) * 0.20f;
+    }
+    g_ui.dd = g_ddDisplay;
+
+    const float soundVal = fabsf(ddRaw);
+    if (r.saturated || soundVal >= DD_OK_COUNTS) {
+        const float k = r.saturated ? 1.0f : constrain(soundVal / 100.0f, 0.0f, 1.0f);
+        buzzerTone((uint16_t)(500.0f + 2500.0f * k), g_set.volume);
+    } else {
+        buzzerOff();
+    }
+    if (fabsf(ddRaw - g_activityRef) > ACTIVITY_DELTA) {
+        g_activityRef = ddRaw;
+        markActivity();
+    }
+#ifdef LOG_ENABLED
+    Serial.print(F("# DD baseline="));
+    Serial.print(r.baseline, 2);
+    Serial.print(F(" pulse="));
+    Serial.print(r.pulse, 2);
+    Serial.print(F(" dd="));
+    Serial.print(ddRaw, 2);
+    Serial.print(F(" sat="));
+    Serial.println(r.saturated ? 1 : 0);
+#endif
 }
 
 /**
@@ -483,6 +512,7 @@ static void handleButtons() {
         } else {
             buzzerOff();
             g_screen = SCR_DD;
+            g_ddDisplayReady = false;
             g_redraw = true;
         }
         return;
@@ -505,6 +535,7 @@ static void handleButtons() {
                 break;
             case SCR_SETTINGS:
                 g_screen = SCR_DD;
+                g_ddDisplayReady = false;
                 break;
         }
         g_redraw = true;
@@ -647,7 +678,11 @@ void loop() {
             delay(5);
         }
     } else {
-        measureCycle();      // Mérési ciklus végrehajtása
+        if (g_screen == SCR_DD) {
+            measureDdCycle();
+        } else {
+            measureCycle();
+        }
         drawMeasureScreen(); // Mérési képernyő kirajzolása
         g_redraw = false;
     }

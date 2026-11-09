@@ -132,7 +132,11 @@
 /** A csúcs lecsengésének időállandója (ms): ennyi idő alatt csökken a különbség ~63 %-ára. */
 #define PEAK_DECAY_MS 1000UL
 /** DD képernyőn ennyi eltérés (ADC egység) alatt "OK" a nullpont. */
-#define DD_OK_COUNTS 2.0f
+#define DD_OK_COUNTS 6.0f
+/** DD minták helye a TX impulzuson belül: 2/4 és 3/4, külön impulzusokon. */
+#define DD_SAMPLE_EARLY_NUM 2
+#define DD_SAMPLE_LATE_NUM 3
+#define DD_SAMPLE_DEN 4
 
 /* ------------------------------------------------------------------ */
 /* Tápfeszültség mérés                                                */

@@ -17,6 +17,7 @@
 #include "measure.h"
 #include "config.h"
 #include "buttons.h"
+#include <math.h>
 
 /** Az impulzus hossza tick-ben. */
 static uint16_t g_tpTicks;
@@ -32,6 +33,16 @@ static uint32_t g_sum1;
 static uint32_t g_sum2;
 static uint16_t g_count;
 static uint16_t g_satCount;
+
+static_assert(DD_SAMPLE_DEN > 0 && DD_SAMPLE_EARLY_NUM > 0 &&
+                  DD_SAMPLE_EARLY_NUM < DD_SAMPLE_LATE_NUM && DD_SAMPLE_LATE_NUM < DD_SAMPLE_DEN,
+              "Invalid DD sample positions");
+static_assert((uint32_t)PULSE_MIN_US * TICKS_PER_US * DD_SAMPLE_EARLY_NUM / DD_SAMPLE_DEN >
+                  ADC_SAMPLE_TICKS + 4 * TICKS_PER_US,
+              "Early DD sample is too close to TX start");
+static_assert((uint32_t)PULSE_MIN_US * TICKS_PER_US * (DD_SAMPLE_DEN - DD_SAMPLE_LATE_NUM) / DD_SAMPLE_DEN >
+                  ADC_PRESCALER,
+              "Late DD sample may occur after TX stop");
 
 /**
  * @brief Inicializálja a mérést: beállítja a TX lábat kimenetként, az ADC-t és a Timer1-et.
@@ -149,6 +160,77 @@ void measureRun(uint8_t pulses) {
         while (TCNT1 < g_periodTicks) {
         }
     }
+}
+
+bool measureDd(uint16_t pulses, DdMeasureResult &r) {
+    if (pulses == 0) {
+        return false;
+    }
+
+    uint32_t sumBaseline[2] = {0, 0};
+    uint32_t sumPulse[2] = {0, 0};
+    uint16_t count[2] = {0, 0};
+    bool saturated = false;
+    const uint16_t sampleTicks[2] = {
+        (uint16_t)((uint32_t)g_tpTicks * DD_SAMPLE_EARLY_NUM / DD_SAMPLE_DEN - ADC_SAMPLE_TICKS),
+        (uint16_t)((uint32_t)g_tpTicks * DD_SAMPLE_LATE_NUM / DD_SAMPLE_DEN - ADC_SAMPLE_TICKS)};
+    const uint16_t baselineStartTicks = g_periodTicks - (ADC_CONV_US + 10) * TICKS_PER_US;
+
+    for (uint16_t i = 0; i < pulses; i++) {
+        const uint8_t phase = i & 1;
+        const uint16_t sampleTick = sampleTicks[phase];
+        ADCSRA |= _BV(ADSC);
+        while (ADCSRA & _BV(ADSC)) {
+        }
+        const uint16_t baseline = ADC;
+
+        while (TCNT1 < g_periodTicks) {
+        }
+        const uint8_t sreg = SREG;
+        cli();
+        TCNT1 = 0;
+        TX_PORT |= _BV(TX_BIT);
+        while (TCNT1 < sampleTick) {
+        }
+        ADCSRA |= _BV(ADSC);
+        // A konverzió közben is időben kikapcsoljuk a TX-et.
+        while (TCNT1 < g_tpTicks) {
+        }
+        TX_PORT &= ~_BV(TX_BIT);
+        while (ADCSRA & _BV(ADSC)) {
+        }
+        const uint16_t pulse = ADC;
+        SREG = sreg;
+
+        sumBaseline[phase] += baseline;
+        sumPulse[phase] += pulse;
+        count[phase]++;
+        if (baseline <= ADC_SAT_LOW || baseline >= ADC_SAT_HIGH ||
+            pulse <= ADC_SAT_LOW || pulse >= ADC_SAT_HIGH) {
+            saturated = true;
+        }
+
+        while (TCNT1 < baselineStartTicks) {
+        }
+        if ((i + 1) % PULSE_CHUNK == 0) {
+            buttonsUpdate();
+        }
+    }
+
+    const float baselineEarly = (float)sumBaseline[0] / count[0];
+    const float pulseEarly = (float)sumPulse[0] / count[0];
+    r.baseline = baselineEarly;
+    r.pulse = pulseEarly;
+    if (count[1] > 0) {
+        const float baselineLate = (float)sumBaseline[1] / count[1];
+        const float pulseLate = (float)sumPulse[1] / count[1];
+        if (fabsf(pulseLate - baselineLate) > fabsf(pulseEarly - baselineEarly)) {
+            r.baseline = baselineLate;
+            r.pulse = pulseLate;
+        }
+    }
+    r.saturated = saturated;
+    return true;
 }
 
 /**

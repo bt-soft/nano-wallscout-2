@@ -15,6 +15,13 @@ struct MeasureResult {
   bool saturated;  ///< Igaz, ha az impulzusok jelentős részénél az ADC telített
 };
 
+/** A nagyobb abszolút eltéréshez tartozó DD minták átlaga. */
+struct DdMeasureResult {
+  float baseline;
+  float pulse;
+  bool saturated;
+};
+
 /**
  * @brief Hardver inicializálása: TX láb, ADC, Timer1. Alvásból ébredés után is hívható.
  */
@@ -37,6 +44,9 @@ void measureReset();
  * @param pulses Az impulzusok száma.
  */
 void measureRun(uint8_t pulses);
+
+/** @brief DD mérés két időpontban, külön impulzusokon; a nagyobb eltérésű átlagot adja. */
+bool measureDd(uint16_t pulses, DdMeasureResult &r);
 
 /**
  * @brief Folyamatos TX impulzussor (szkópos beállításhoz); gombnyomásra tér vissza.
