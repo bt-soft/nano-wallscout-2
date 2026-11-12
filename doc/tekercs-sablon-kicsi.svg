@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="100mm"
+   height="90mm"
+   viewBox="0 0 100 90"
+   font-family="Consolas, monospace"
+   font-size="3"
+   version="1.1"
+   id="svg20"
+   sodipodi:docname="tekercs-sablon-kicsi.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs20" />
+  <sodipodi:namedview
+     id="namedview20"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="2.4253472"
+     inkscape:cx="188.83894"
+     inkscape:cy="170.07874"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg20" />
+  <!-- 1:1 sablon egy D tekercshez. Nyomtasd 100%-ban (ne „illesztés oldalhoz”). 1 egység = 1 mm. -->
+  <rect
+     width="100"
+     height="90"
+     fill="#fff"
+     id="rect1" />
+  <text
+     x="5"
+     y="6"
+     fill="#003366"
+     font-weight="bold"
+     id="text1">WallScout D-tekercs kicsi sablon 1:1</text>
+  <g
+     id="g20">
+    <!-- Külső és belső fal, a huzalközépvonaltól 3 mm-re. -->
+    <path
+       d="M68 12 L65 12 A53 33 0 0 0 65 78 L68 78 Z"
+       fill="none"
+       stroke="#999"
+       stroke-width="0.3"
+       id="path1" />
+    <path
+       d="M62 18.03 A47 27 0 0 0 62 71.97 Z"
+       fill="none"
+       stroke="#999"
+       stroke-width="0.3"
+       id="path2" />
+    <!-- Huzal középvonala: 60 mm-es egyenes oldal és 50 mm-es D-mélység. -->
+    <path
+       d="M65 15 V75 A50 30 0 0 1 65 15 Z"
+       fill="none"
+       stroke="#c00"
+       stroke-width="0.4"
+       id="path3" />
+    <!-- 3 mm-es csapfuratok a huzal középvonalán. -->
+    <g
+       fill="none"
+       stroke="#036"
+       stroke-width="0.3"
+       id="g13">
+      <circle
+         cx="65"
+         cy="15"
+         r="1.5"
+         id="circle3" />
+      <circle
+         cx="65"
+         cy="75"
+         r="1.5"
+         id="circle4" />
+      <circle
+         cx="49.549"
+         cy="16.468"
+         r="1.5"
+         id="circle5" />
+      <circle
+         cx="49.549"
+         cy="73.532"
+         r="1.5"
+         id="circle6" />
+      <circle
+         cx="35.611"
+         cy="20.729"
+         r="1.5"
+         id="circle7" />
+      <circle
+         cx="35.611"
+         cy="69.271"
+         r="1.5"
+         id="circle8" />
+      <circle
+         cx="24.549"
+         cy="27.366"
+         r="1.5"
+         id="circle9" />
+      <circle
+         cx="24.549"
+         cy="62.634"
+         r="1.5"
+         id="circle10" />
+      <circle
+         cx="17.447"
+         cy="35.729"
+         r="1.5"
+         id="circle11" />
+      <circle
+         cx="17.447"
+         cy="54.271"
+         r="1.5"
+         id="circle12" />
+      <circle
+         cx="15"
+         cy="45"
+         r="1.5"
+         id="circle13" />
+    </g>
+    <!-- Méretvonalak: 60 mm-es egyenes oldal és 50 mm-es mélység. -->
+    <line
+       x1="65"
+       y1="10"
+       x2="65"
+       y2="80"
+       stroke="#999"
+       stroke-width="0.2"
+       stroke-dasharray="1 1"
+       id="line13" />
+    <line
+       x1="10"
+       y1="45"
+       x2="70"
+       y2="45"
+       stroke="#999"
+       stroke-width="0.2"
+       stroke-dasharray="1 1"
+       id="line14" />
+    <line
+       x1="75"
+       y1="15"
+       x2="75"
+       y2="75"
+       stroke="#036"
+       stroke-width="0.25"
+       id="line15" />
+    <line
+       x1="73.5"
+       y1="15"
+       x2="76.5"
+       y2="15"
+       stroke="#036"
+       stroke-width="0.25"
+       id="line16" />
+    <line
+       x1="73.5"
+       y1="75"
+       x2="76.5"
+       y2="75"
+       stroke="#036"
+       stroke-width="0.25"
+       id="line17" />
+    <text
+       x="78"
+       y="45"
+       fill="#a40"
+       text-anchor="middle"
+       transform="rotate(-90 78 45)"
+       id="text17">egyenes oldal: 60 mm</text>
+    <line
+       x1="15"
+       y1="84"
+       x2="65"
+       y2="84"
+       stroke="#036"
+       stroke-width="0.25"
+       id="line18" />
+    <line
+       x1="15"
+       y1="82.5"
+       x2="15"
+       y2="85.5"
+       stroke="#036"
+       stroke-width="0.25"
+       id="line19" />
+    <line
+       x1="65"
+       y1="82.5"
+       x2="65"
+       y2="85.5"
+       stroke="#036"
+       stroke-width="0.25"
+       id="line20" />
+    <text
+       x="40"
+       y="82"
+       fill="#a40"
+       text-anchor="middle"
+       id="text20">D-mélység: 50 mm</text>
+  </g>
+</svg>

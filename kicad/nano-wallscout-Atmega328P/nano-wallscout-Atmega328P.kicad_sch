@@ -978,183 +978,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:Buzzer"
-			(pin_names
-				(offset 0.0254)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "BZ"
-				(at 3.81 1.27 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "Buzzer"
-				(at 3.81 -1.27 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at -0.635 2.54 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at -0.635 2.54 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Buzzer, polarized"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "quartz resonator ceramic"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "*Buzzer*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Buzzer_0_1"
-				(polyline
-					(pts
-						(xy -1.651 1.905) (xy -1.143 1.905)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.397 2.159) (xy -1.397 1.651)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 3.175)
-					(mid 3.1612 0)
-					(end 0 -3.175)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 3.175) (xy 0 -3.175)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Buzzer_1_1"
-				(pin passive line
-					(at -2.54 2.54 0)
-					(length 2.54)
-					(name "+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -2.54 -2.54 0)
-					(length 2.54)
-					(name "-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:C"
 			(pin_numbers
 				(hide yes)
@@ -2208,216 +2031,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:Q_NPN"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "Q1"
-				(at 5.08 1.2701 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "2N2222"
-				(at 5.08 -1.2699 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline_Wide"
-				(at 5.08 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "NPN bipolar junction transistor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "BJT"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Q_NPN_0_1"
-				(polyline
-					(pts
-						(xy -2.54 0) (xy 0.635 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 1.905) (xy 0.635 -1.905)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 0.635) (xy 2.54 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 -0.635) (xy 2.54 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 1.27 0)
-					(radius 2.8194)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-			)
-			(symbol "Q_NPN_1_1"
-				(pin passive line
-					(at 2.54 5.08 270)
-					(length 2.54)
-					(name "C"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -5.08 90)
-					(length 2.54)
-					(name "E"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:R"
 			(pin_numbers
 				(hide yes)
@@ -2761,6 +2374,206 @@
 						)
 					)
 					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:Speaker_Crystal"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "LS"
+				(at 0.635 5.715 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify right)
+				)
+			)
+			(property "Value" "Speaker_Crystal"
+				(at 0.635 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify right)
+				)
+			)
+			(property "Footprint" ""
+				(at -0.889 -1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at -0.889 -1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Crystal speaker/transducer"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "crystal speaker ultrasonic transducer"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Speaker_Crystal_0_0"
+				(rectangle
+					(start -2.54 1.27)
+					(end 1.143 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -2.032 -0.635)
+					(end 0.635 -1.905)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.651 -0.254) (xy 0.381 -0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.651 -2.286) (xy 0.381 -2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -0.254) (xy -0.635 0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -2.286) (xy -0.635 -3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.143 1.27) (xy 3.683 3.81) (xy 3.683 -6.35) (xy 1.143 -3.81)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Speaker_Crystal_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -5.08 -2.54 0)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5029,22 +4842,6 @@
 		)
 		(uuid "6b0c6d50-85f5-47e8-aa52-27fc2205c215")
 	)
-	(text "Soros védelem"
-		(exclude_from_sim no)
-		(at 209.55 61.722 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "7848974a-369f-4a63-942d-27a663109eaa")
-	)
-	(junction
-		(at 36.83 160.02)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "023ec8b8-c771-4afb-8fc7-2f230113a5c3")
-	)
 	(junction
 		(at 30.48 118.11)
 		(diameter 0)
@@ -5068,12 +4865,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "11c75c10-e121-4880-b0dd-4ae615cfb187")
-	)
-	(junction
-		(at 36.83 167.64)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1c0fb435-b457-48a8-9ef2-cb83af72d5d5")
 	)
 	(junction
 		(at 262.89 83.82)
@@ -5288,16 +5079,6 @@
 			(type default)
 		)
 		(uuid "003d44ad-0af5-42b7-a17a-41d78f53033c")
-	)
-	(wire
-		(pts
-			(xy 36.83 167.64) (xy 40.64 167.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "02a42396-431e-4e56-a75f-093ce0964d60")
 	)
 	(wire
 		(pts
@@ -5691,16 +5472,6 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 160.02) (xy 40.64 160.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "41d41f43-36d5-4c5b-a0a8-3dac533ab179")
-	)
-	(wire
-		(pts
 			(xy 182.88 72.39) (xy 185.42 72.39)
 		)
 		(stroke
@@ -5808,6 +5579,26 @@
 			(type default)
 		)
 		(uuid "503c3936-5b14-43d6-89c9-c1b9acfb2dec")
+	)
+	(wire
+		(pts
+			(xy 39.37 173.99) (xy 50.8 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "549ce073-421f-44d1-84bc-e22dee6b37fc")
+	)
+	(wire
+		(pts
+			(xy 130.81 82.55) (xy 130.81 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "55276f03-8cc7-4ea7-aafe-f1bb7310c958")
 	)
 	(wire
 		(pts
@@ -6041,16 +5832,6 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 152.4) (xy 36.83 160.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "77563b99-6aa5-49f4-959a-c2479b845663")
-	)
-	(wire
-		(pts
 			(xy 30.48 118.11) (xy 26.67 118.11)
 		)
 		(stroke
@@ -6131,16 +5912,6 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 166.37) (xy 36.83 167.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "80a5e98c-84f7-4f61-9241-21830fec2660")
-	)
-	(wire
-		(pts
 			(xy 63.5 135.89) (xy 63.5 138.43)
 		)
 		(stroke
@@ -6191,16 +5962,6 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 179.07) (xy 44.45 179.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8d9d8925-9e6c-47c4-bf6a-e5dde73e6e8a")
-	)
-	(wire
-		(pts
 			(xy 78.74 77.47) (xy 80.01 77.47)
 		)
 		(stroke
@@ -6208,16 +5969,6 @@
 			(type default)
 		)
 		(uuid "8e239f15-458b-446a-a88a-218dc95fbb00")
-	)
-	(wire
-		(pts
-			(xy 50.8 179.07) (xy 55.88 179.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "90901711-bd51-406a-aa8d-de5b8433fd91")
 	)
 	(wire
 		(pts
@@ -6278,6 +6029,16 @@
 			(type default)
 		)
 		(uuid "99aab866-6fec-45fe-827e-debf2dc384e5")
+	)
+	(wire
+		(pts
+			(xy 39.37 176.53) (xy 39.37 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a6368fd-b38c-42ee-8e66-7041fe86a492")
 	)
 	(wire
 		(pts
@@ -6351,7 +6112,7 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 77.47) (xy 130.81 82.55)
+			(xy 130.81 77.47) (xy 130.81 69.85)
 		)
 		(stroke
 			(width 0)
@@ -6511,16 +6272,6 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 167.64) (xy 36.83 173.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b349a19d-121f-4095-80e7-107f264476fa")
-	)
-	(wire
-		(pts
 			(xy 153.67 111.76) (xy 153.67 110.49)
 		)
 		(stroke
@@ -6638,16 +6389,6 @@
 			(type default)
 		)
 		(uuid "c717f3d6-3317-42f4-b70f-98af6960231d")
-	)
-	(wire
-		(pts
-			(xy 36.83 160.02) (xy 36.83 161.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c94899c3-6045-4803-b637-58f775331759")
 	)
 	(wire
 		(pts
@@ -6901,16 +6642,6 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 142.24) (xy 36.83 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e2973c13-5d78-432c-aa92-f4cba4a523b6")
-	)
-	(wire
-		(pts
 			(xy 140.97 162.56) (xy 154.94 162.56)
 		)
 		(stroke
@@ -7058,6 +6789,16 @@
 			(type default)
 		)
 		(uuid "fb06773d-ac6e-4d45-aa78-0334e4a3063b")
+	)
+	(wire
+		(pts
+			(xy 130.81 90.17) (xy 130.81 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fe5bff20-049a-468b-82e5-cb56e6cbdf2c")
 	)
 	(wire
 		(pts
@@ -7313,7 +7054,7 @@
 	)
 	(global_label "BUZZER"
 		(shape input)
-		(at 55.88 179.07 0)
+		(at 50.8 173.99 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7323,7 +7064,7 @@
 		)
 		(uuid "841bffda-faba-48d8-8d2d-71d2aa705e3c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 66.3037 179.07 0)
+			(at 61.2237 173.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7658,6 +7399,86 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Speaker_Crystal")
+		(at 34.29 176.53 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "07c9bc7f-0afe-4ddd-ab98-3ead94065bcc")
+		(property "Reference" "LS1"
+			(at 33.7185 165.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Piezo!!"
+			(at 33.7185 167.64 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x01_P2.54mm_Vertical"
+			(at 35.179 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 35.179 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Crystal speaker/transducer"
+			(at 34.29 176.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "29a9f17a-27ce-4736-aa02-dbe7cae66ea3")
+		)
+		(pin "2"
+			(uuid "c3f359c6-e9a4-4dae-820f-fee3148fc8cb")
+		)
+		(instances
+			(project "nano-wallscout-Atmega328P"
+				(path "/34d29903-802b-4e4f-a971-54513bc11f78"
+					(reference "LS1")
+					(unit 1)
+				)
 			)
 		)
 	)
@@ -8682,6 +8503,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 130.81 86.36 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2765fc95-231f-4b3a-89ee-c00a14907458")
+		(property "Reference" "C14"
+			(at 128.016 82.55 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "47nF"
+			(at 127 88.9 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm"
+			(at 129.8448 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 130.81 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 130.81 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "fe084e69-e879-4f6f-a6a5-364f64716337")
+		)
+		(pin "1"
+			(uuid "5878ef53-15bd-411a-9fe9-ca11aaf8ddf1")
+		)
+		(instances
+			(project "nano-wallscout-Atmega328P"
+				(path "/34d29903-802b-4e4f-a971-54513bc11f78"
+					(reference "C14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 210.82 29.21 180)
 		(unit 1)
@@ -8758,86 +8658,6 @@
 			(project "nano-wallscout-Atmega328P"
 				(path "/34d29903-802b-4e4f-a971-54513bc11f78"
 					(reference "R11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Buzzer")
-		(at 34.29 163.83 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "2ba83e6f-2c3f-4b80-89b7-6483febad325")
-		(property "Reference" "BZ1"
-			(at 28.448 165.862 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Buzzer"
-			(at 28.702 160.274 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Buzzer_Beeper:Buzzer_TDK_PS1240P02BT_D12.2mm_H6.5mm"
-			(at 34.925 161.29 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 34.925 161.29 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Buzzer, polarized"
-			(at 34.29 163.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "da05a5d5-2dc7-427f-8cb6-c19e1eaa649f")
-		)
-		(pin "1"
-			(uuid "fcacf34f-b995-4b09-a381-3ecd3f1cf1fc")
-		)
-		(instances
-			(project "nano-wallscout-Atmega328P"
-				(path "/34d29903-802b-4e4f-a971-54513bc11f78"
-					(reference "BZ1")
 					(unit 1)
 				)
 			)
@@ -9152,85 +8972,6 @@
 			(project "nano-wallscout-Atmega328P"
 				(path "/34d29903-802b-4e4f-a971-54513bc11f78"
 					(reference "C7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+BATT")
-		(at 36.83 142.24 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3a0b8237-b1a2-4357-a8aa-fc79a5807071")
-		(property "Reference" "#PWR041"
-			(at 36.83 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+BATT"
-			(at 39.37 140.9699 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 36.83 142.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 36.83 142.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+BATT\""
-			(at 36.83 142.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f224340b-3676-4b3c-a6a6-1aa8708da377")
-		)
-		(instances
-			(project "nano-wallscout-Atmega328P"
-				(path "/34d29903-802b-4e4f-a971-54513bc11f78"
-					(reference "#PWR041")
 					(unit 1)
 				)
 			)
@@ -9873,6 +9614,85 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 130.81 92.71 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4f61862a-791a-4a6e-a002-aa6be0fd0b0a")
+		(property "Reference" "#PWR041"
+			(at 130.81 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 130.81 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 130.81 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 130.81 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 130.81 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0ac62d31-a75b-4da3-b04a-75567b015769")
+		)
+		(instances
+			(project "nano-wallscout-Atmega328P"
+				(path "/34d29903-802b-4e4f-a971-54513bc11f78"
+					(reference "#PWR041")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 271.78 149.86 0)
 		(unit 1)
 		(body_style 1)
@@ -10347,7 +10167,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 36.83 184.15 0)
+		(at 39.37 179.07 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10358,7 +10178,7 @@
 		(fields_autoplaced yes)
 		(uuid "5d126ca7-b03c-4beb-a15b-e495962f3a01")
 		(property "Reference" "#PWR04"
-			(at 36.83 190.5 0)
+			(at 39.37 185.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10369,7 +10189,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 36.83 189.23 0)
+			(at 39.37 184.15 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10379,7 +10199,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 36.83 184.15 0)
+			(at 39.37 179.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10390,7 +10210,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 36.83 184.15 0)
+			(at 39.37 179.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10401,7 +10221,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 36.83 184.15 0)
+			(at 39.37 179.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11532,110 +11352,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:D")
-		(at 40.64 163.83 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7d2c7f38-afe1-4184-924a-d6cdc81cb85f")
-		(property "Reference" "D1"
-			(at 43.18 162.5599 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1N4148"
-			(at 43.18 165.0999 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P10.16mm_Horizontal"
-			(at 40.64 163.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 40.64 163.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Diode"
-			(at 40.64 163.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 40.64 163.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 40.64 163.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "6b9e2db1-d506-4d0f-b1bb-207e6008b1e1")
-		)
-		(pin "1"
-			(uuid "0d0fc9be-9901-4ef4-922d-9a800a776fd1")
-		)
-		(instances
-			(project "nano-wallscout-Atmega328P"
-				(path "/34d29903-802b-4e4f-a971-54513bc11f78"
-					(reference "D1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 137.16 77.47 90)
 		(unit 1)
@@ -12613,92 +12329,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:Q_NPN")
-		(at 39.37 179.07 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a355ce8c-9616-42d6-8348-208f2edec247")
-		(property "Reference" "Q1"
-			(at 34.29 177.7999 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "2N2222"
-			(at 34.29 180.3399 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline_Wide"
-			(at 34.29 176.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 39.37 179.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "NPN bipolar junction transistor"
-			(at 39.37 179.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "1669e171-7496-4f49-b006-fed1c4e71c84")
-		)
-		(pin "1"
-			(uuid "71e9d528-c5bb-47c4-8f37-936ced5a16db")
-		)
-		(pin "3"
-			(uuid "92a06533-079b-4e52-ab03-936124e560e4")
-		)
-		(instances
-			(project "nano-wallscout-Atmega328P"
-				(path "/34d29903-802b-4e4f-a971-54513bc11f78"
-					(reference "Q1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Regulator_Linear:LM7805_TO220")
 		(at 72.39 30.48 0)
 		(unit 1)
@@ -13532,87 +13162,6 @@
 			(project "nano-wallscout-Atmega328P"
 				(path "/34d29903-802b-4e4f-a971-54513bc11f78"
 					(reference "#PWR012")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 46.99 179.07 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "bd5df8bf-cc07-47fd-ae43-fd83f7d3f09f")
-		(property "Reference" "R2"
-			(at 48.514 182.118 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "1k"
-			(at 48.768 176.022 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 46.99 177.292 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 46.99 179.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 46.99 179.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0970b176-016f-4256-b098-29e0fcfd12a9")
-		)
-		(pin "2"
-			(uuid "b9183bab-479f-4e09-82e2-687ed4ebc075")
-		)
-		(instances
-			(project "nano-wallscout-Atmega328P"
-				(path "/34d29903-802b-4e4f-a971-54513bc11f78"
-					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -14524,87 +14073,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 36.83 148.59 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d1ea2c52-cc5f-4679-8c0d-08d329a31730")
-		(property "Reference" "R1"
-			(at 30.734 145.796 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "390"
-			(at 30.988 148.59 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 38.608 148.59 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 36.83 148.59 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 36.83 148.59 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "dfb46463-21aa-4783-9937-86bc3247cd48")
-		)
-		(pin "2"
-			(uuid "70696909-38f3-48e9-92dc-d2f42170de19")
-		)
-		(instances
-			(project "nano-wallscout-Atmega328P"
-				(path "/34d29903-802b-4e4f-a971-54513bc11f78"
-					(reference "R1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 238.76 149.86 0)
 		(unit 1)
@@ -14766,7 +14234,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint_Alt")
-		(at 130.81 82.55 180)
+		(at 130.81 69.85 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14775,8 +14243,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d7d6e96b-db9e-4292-9c11-a5bb29b9fadf")
-		(property "Reference" "TP2"
-			(at 135.636 84.836 0)
+		(property "Reference" "TP1"
+			(at 125.984 67.564 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14786,8 +14254,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Vétel beállítás"
-			(at 136.398 88.138 0)
+		(property "Value" "Analóg mérőpont"
+			(at 123.444 64.008 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14798,7 +14266,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm"
-			(at 125.73 82.55 0)
+			(at 135.89 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14809,7 +14277,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 125.73 82.55 0)
+			(at 135.89 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14820,7 +14288,7 @@
 			)
 		)
 		(property "Description" "test point (alternative shape)"
-			(at 130.81 82.55 0)
+			(at 130.81 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14836,7 +14304,7 @@
 		(instances
 			(project "nano-wallscout-Atmega328P"
 				(path "/34d29903-802b-4e4f-a971-54513bc11f78"
-					(reference "TP2")
+					(reference "TP1")
 					(unit 1)
 				)
 			)
